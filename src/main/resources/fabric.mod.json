@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "pepeethings",
 	"version": "${version}",
-	"name": "Example Mod",
+	"name": "Pepee Things",
 	"description": "This mod aims to help new BTA modders.",
 	"authors": [
-		"Turnip Labs"
+		"Pepee"
 	],
 	"contact": {
 		"homepage": "",
@@ -16,20 +16,23 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"turniplabs.examplemod.ExampleMod"
+			"qapy.pepeethings.PepeeThingsMod"
 		],
 		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"qapy.pepeethings.PepeeThingsMod"
 		],
 		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
+			"qapy.pepeethings.PepeeThingsMod"
+		],
+		"initModels": [
+			"qapy.pepeethings.PepeeThingsModels"
 		],
 		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
+			"qapy.pepeethings.PepeeThingsRecipes"
 		]
 	},
 	"mixins": [
-		"examplemod.mixins.json"
+		"pepeethings.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=${fabricloader}",
