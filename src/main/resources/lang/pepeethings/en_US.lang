@@ -1,7 +1,18 @@
 item.pepeethings.chisel.name=Chisel
 item.pepeethings.chisel.desc=Used to chisel blocks into decorative shapes.
-item.pepeethings.chisel_steel.name=Steel Chisel
-item.pepeethings.chisel_steel.desc=A stronger unbreakable chisel.
+item.pepeethings.chisel.steel.name=Steel Chisel
+item.pepeethings.chisel.steel.desc=A stronger unbreakable chisel.
 item.pepeethings.moss.name=Ball of Moss
 item.pepeethings.moss.desc=Can be used to make blocks mossy.
+item.pepeethings.tool.hammer.stone.name=Stone Hammer
+item.pepeethings.tool.hammer.stone.desc=Hammer some stone with this stone tool. Breaks only one block while crouching.
+item.pepeethings.tool.hammer.iron.name=Iron Hammer
+item.pepeethings.tool.hammer.iron.desc=Hammer some stone with this iron tool. Breaks only one block while crouching.
+item.pepeethings.tool.hammer.gold.name=Golden Hammer
+item.pepeethings.tool.hammer.gold.desc=Hammer some stone with this golden tool. Breaks only one block while crouching.
+item.pepeethings.tool.hammer.diamond.name=Diamond Hammer
+item.pepeethings.tool.hammer.diamond.desc=Hammer some stone with this diamond tool. Breaks only one block while crouching.
+item.pepeethings.tool.hammer.steel.name=Steel Hammer
+item.pepeethings.tool.hammer.steel.desc=Hammer some stone with this durable steel tool. Breaks only one block while crouching.
+
 subtitles.item.chisel.use=Chiseling block

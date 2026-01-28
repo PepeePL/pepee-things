@@ -20,7 +20,11 @@ public class PepeeThingsModels implements ModelEntrypoint {
 		ModelHelper.setItemModel(ModItems.CHISEL, () -> new ItemModelStandard(ModItems.CHISEL, null).setIcon("pepeethings:item/chisel"));
 		ModelHelper.setItemModel(ModItems.CHISEL_STEEL, () -> new ItemModelStandard(ModItems.CHISEL_STEEL, null).setIcon("pepeethings:item/chisel_steel"));
 		ModelHelper.setItemModel(ModItems.MOSS, () -> new ItemModelStandard(ModItems.MOSS, null).setIcon("pepeethings:item/moss"));
-
+		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_STONE, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_STONE, null).setIcon("pepeethings:item/tool_hammer_stone"));
+		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_IRON, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_IRON, null).setIcon("pepeethings:item/tool_hammer_iron"));
+		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_GOLD, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_GOLD, null).setIcon("pepeethings:item/tool_hammer_gold"));
+		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_DIAMOND, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_DIAMOND, null).setIcon("pepeethings:item/tool_hammer_diamond"));
+		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_STEEL, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_STEEL, null).setIcon("pepeethings:item/tool_hammer_steel"));
 	}
 
 	@Override

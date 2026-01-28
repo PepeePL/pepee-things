@@ -16,6 +16,7 @@ public class MossRegistry {
 		MOSSY_MAP.put(Blocks.GRANITE.id(), Blocks.MOSS_GRANITE.id());
 		MOSSY_MAP.put(Blocks.LIMESTONE.id(), Blocks.MOSS_LIMESTONE.id());
 		MOSSY_MAP.put(Blocks.BRICK_STONE_POLISHED.id(), Blocks.BRICK_STONE_POLISHED_MOSSY.id());
+		MOSSY_MAP.put(Blocks.LOG_OAK.id(), Blocks.LOG_OAK_MOSSY.id());
 	}
 	public static Integer getMossyVariant(int blockID){
 		return MOSSY_MAP.get(blockID);
