@@ -6,6 +6,7 @@ import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelStandard;
+import qapy.pepeethings.client.model.BlockModelGlassColored;
 import qapy.pepeethings.client.model.ItemModelNet;
 import turniplabs.halplibe.helper.ModelHelper;
 import turniplabs.halplibe.util.ModelEntrypoint;
@@ -13,6 +14,7 @@ import turniplabs.halplibe.util.ModelEntrypoint;
 public class PepeeThingsModels implements ModelEntrypoint {
 	@Override
 	public void initBlockModels(BlockModelDispatcher dispatcher) {
+		ModelHelper.setBlockModel(ModBlocks.GLASS_COLORED, () -> new BlockModelGlassColored<>(ModBlocks.GLASS_COLORED, false).onRenderLayer(1));
 
 	}
 
