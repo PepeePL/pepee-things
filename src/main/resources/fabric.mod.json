@@ -29,6 +29,12 @@
 		],
 		"recipesReady": [
 			"qapy.pepeethings.PepeeThingsRecipes"
+		],
+		"beforeClientStart": [
+			"qapy.pepeethings.PepeeThingsMod"
+		],
+		"afterClientStart": [
+			"qapy.pepeethings.PepeeThingsMod"
 		]
 	},
 	"mixins": [

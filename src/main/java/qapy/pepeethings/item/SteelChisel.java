@@ -19,7 +19,6 @@ public class SteelChisel extends Item {
 	}
 	private boolean chiselBlock(Player player, World world, int blockX, int blockY, int blockZ) {
 		int blockID = world.getBlockId(blockX, blockY, blockZ);
-		if(!world.isClientSide){
 			Integer nextBlockID = ChiselRegistry.getNext(blockID);
 			if(nextBlockID == null){
 				return false;
@@ -28,7 +27,5 @@ public class SteelChisel extends Item {
 			world.playBlockEvent(2001, blockX, blockY, blockZ, nextBlockID);
 			world.playSoundAtEntity(player, player, "pepeethings:item.chisel.use", 1.0f, 0.9f);
 			return true;
-		}
-		return false;
 	}
 }

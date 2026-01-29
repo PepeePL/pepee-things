@@ -33,58 +33,60 @@ public class ItemToolHammer extends ItemTool {
 	public boolean onBlockDestroyed(World world, ItemStack itemstack, int i, int x, int y, int z, Side side, Mob mob) {
 		Block<?> block = Blocks.blocksList[i];
 		Player player = (Player) mob;
-		if(world.isClientSide) return false;
-		if (block != null && (block.getHardness() > 0.0F || this.isSilkTouch()) && !player.isSneaking()) {
-			itemstack.damageItem(2, player);
-			if (side == Side.NORTH || side == Side.SOUTH) {
-				for (int dx = -1; dx <= 1; dx++) {
-					for (int dy = -1; dy <= 1; dy++) {
-						if (dx == 0 && dy == 0) continue;
-						int targetX = x + dx;
-						int targetY = y + dy;
-						int targetZ = z;
-						int targetBlockID = world.getBlockId(targetX, targetY, targetZ);
-						Block<?> targetBlock = Blocks.blocksList[targetBlockID];
-						if (targetBlock != null && block.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemstack, targetBlock)) {
-							if(player.getGamemode().dropBlockOnBreak()) targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
-							world.setBlockWithNotify(targetX, targetY, targetZ, 0);
+			if (block != null && (block.getHardness() > 0.0F || this.isSilkTouch()) && !player.isSneaking()) {
+				itemstack.damageItem(2, player);
+				if (side == Side.NORTH || side == Side.SOUTH) {
+					for (int dx = -1; dx <= 1; dx++) {
+						for (int dy = -1; dy <= 1; dy++) {
+							if (dx == 0 && dy == 0) continue;
+							int targetX = x + dx;
+							int targetY = y + dy;
+							int targetZ = z;
+							int targetBlockID = world.getBlockId(targetX, targetY, targetZ);
+							Block<?> targetBlock = Blocks.blocksList[targetBlockID];
+							if (targetBlock != null && targetBlock.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemstack, targetBlock)) {
+								if (player.getGamemode().dropBlockOnBreak())
+									targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
+								world.setBlockWithNotify(targetX, targetY, targetZ, 0);
+							}
 						}
 					}
 				}
-			}
-			if (side == Side.WEST || side == Side.EAST) {
-				for (int dz = -1; dz <= 1; dz++) {
-					for (int dy = -1; dy <= 1; dy++) {
-						if (dz == 0 && dy == 0) continue;
-						int targetZ = z + dz;
-						int targetY = y + dy;
-						int targetX = x;
-						int targetBlockID = world.getBlockId(targetX, targetY, targetZ);
-						Block<?> targetBlock = Blocks.blocksList[targetBlockID];
-						if (targetBlock != null && block.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemstack, targetBlock)) {
-							if(player.getGamemode().dropBlockOnBreak()) targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
-							world.setBlockWithNotify(targetX, targetY, targetZ, 0);
-						}
-					}
-				}
-			}
-			if (side == Side.BOTTOM || side == Side.TOP) {
-				for (int dx = -1; dx <= 1; dx++) {
+				if (side == Side.WEST || side == Side.EAST) {
 					for (int dz = -1; dz <= 1; dz++) {
-						if (dx == 0 && dz == 0) continue;
-						int targetX = x + dx;
-						int targetZ = z + dz;
-						int targetY = y;
-						int targetBlockID = world.getBlockId(targetX, targetY, targetZ);
-						Block<?> targetBlock = Blocks.blocksList[targetBlockID];
-						if (targetBlock != null && block.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemstack, targetBlock)) {
-							if(player.getGamemode().dropBlockOnBreak()) targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
-							world.setBlockWithNotify(targetX, targetY, targetZ, 0);
+						for (int dy = -1; dy <= 1; dy++) {
+							if (dz == 0 && dy == 0) continue;
+							int targetZ = z + dz;
+							int targetY = y + dy;
+							int targetX = x;
+							int targetBlockID = world.getBlockId(targetX, targetY, targetZ);
+							Block<?> targetBlock = Blocks.blocksList[targetBlockID];
+							if (targetBlock != null && block.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemstack, targetBlock)) {
+								if (player.getGamemode().dropBlockOnBreak())
+									targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
+								world.setBlockWithNotify(targetX, targetY, targetZ, 0);
+							}
+						}
+					}
+				}
+				if (side == Side.BOTTOM || side == Side.TOP) {
+					for (int dx = -1; dx <= 1; dx++) {
+						for (int dz = -1; dz <= 1; dz++) {
+							if (dx == 0 && dz == 0) continue;
+							int targetX = x + dx;
+							int targetZ = z + dz;
+							int targetY = y;
+							int targetBlockID = world.getBlockId(targetX, targetY, targetZ);
+							Block<?> targetBlock = Blocks.blocksList[targetBlockID];
+							if (targetBlock != null && block.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemstack, targetBlock)) {
+								if (player.getGamemode().dropBlockOnBreak())
+									targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
+								world.setBlockWithNotify(targetX, targetY, targetZ, 0);
+							}
 						}
 					}
 				}
 			}
-		}
 		return true;
 	}
 
