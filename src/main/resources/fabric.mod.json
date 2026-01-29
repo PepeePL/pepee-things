@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "pepeethings",
 	"version": "${version}",
-	"name": "Pepee Things",
+	"name": "Pepee's Things",
 	"description": "Random things I came up with.",
 	"authors": [
 		"Pepee"

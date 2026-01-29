@@ -2,10 +2,7 @@ package qapy.pepeethings;
 
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.material.ToolMaterial;
-import qapy.pepeethings.item.Chisel;
-import qapy.pepeethings.item.ItemToolHammer;
-import qapy.pepeethings.item.Moss;
-import qapy.pepeethings.item.SteelChisel;
+import qapy.pepeethings.item.*;
 import turniplabs.halplibe.helper.ItemBuilder;
 
 import static qapy.pepeethings.ModConfig.itemID;
@@ -41,6 +38,6 @@ public class ModItems {
 		TOOL_HAMMER_STEEL = new ItemBuilder(MOD_ID)
 			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID(), ToolMaterial.steel));
 		NET = new ItemBuilder(MOD_ID)
-			.build(new qapy.pepeethings.item.Net("net", "pepeethings:item/net", itemID()));
+			.build(new Net("net", "pepeethings:item/net", itemID()));
 	}
 }
