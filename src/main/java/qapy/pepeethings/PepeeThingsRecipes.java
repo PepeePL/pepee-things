@@ -2,6 +2,7 @@ package qapy.pepeethings;
 
 import net.minecraft.core.block.Blocks;
 import net.minecraft.core.item.Items;
+import qapy.pepeethings.util.RecipeBuilderDyeing;
 import turniplabs.halplibe.helper.RecipeBuilder;
 import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
 import turniplabs.halplibe.util.RecipeEntrypoint;
@@ -22,6 +23,8 @@ public class PepeeThingsRecipes implements RecipeEntrypoint {
 		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("tool_hammer_steel", ModItems.TOOL_HAMMER_STEEL.getDefaultStack());
 		RecipeBuilderShaped netRecipe = new RecipeBuilderShaped(MOD_ID, "  W", " SW", "S " );
 		netRecipe.addInput('S', Items.STICK).addInput('W', "minecraft:wools").create("net", ModItems.NET.getDefaultStack());
+		RecipeBuilderDyeing glassDyeing = new RecipeBuilderDyeing(MOD_ID);
+		glassDyeing.setInput("pepeethings:glasses").create("glass_dyeing", ModBlocks.GLASS_COLORED);
 	}
 
 	@Override
