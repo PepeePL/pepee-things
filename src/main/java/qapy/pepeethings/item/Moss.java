@@ -1,11 +1,11 @@
-package qapy.pepeethings.items;
+package qapy.pepeethings.item;
 
 import net.minecraft.core.entity.player.Player;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
-import qapy.pepeethings.utils.MossRegistry;
+import qapy.pepeethings.util.MossRegistry;
 
 public class Moss extends Item {
 	public Moss(String name, String namespaceId, int id) {

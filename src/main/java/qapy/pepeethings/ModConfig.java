@@ -45,10 +45,10 @@ public class ModConfig {
 			.addEntry("blockIDStart", BLOCK_ID_START)
 			.addEntry("itemIDStart", ITEM_ID_START);
 	}
-	public static int blockID(String name){
+	public static int blockID(){
 		return currentBlockID++;
 	}
-	public static int itemID(String name) {
+	public static int itemID() {
 		return currentItemID++;
 	}
 	@SuppressWarnings("unchecked")

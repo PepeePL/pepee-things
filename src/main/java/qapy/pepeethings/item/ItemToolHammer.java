@@ -1,4 +1,4 @@
-package qapy.pepeethings.items;
+package qapy.pepeethings.item;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.Blocks;

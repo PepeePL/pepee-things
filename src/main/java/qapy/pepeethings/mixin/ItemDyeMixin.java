@@ -15,7 +15,7 @@ import qapy.pepeethings.ModItems;
 
 import java.util.Random;
 
-import static qapy.pepeethings.utils.MossRegistry.getMossyBlocks;
+import static qapy.pepeethings.util.MossRegistry.getMossyBlocks;
 
 @Mixin(ItemDye.class)
 public class ItemDyeMixin {
