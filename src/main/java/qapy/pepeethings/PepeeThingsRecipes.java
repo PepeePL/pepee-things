@@ -20,6 +20,8 @@ public class PepeeThingsRecipes implements RecipeEntrypoint {
 		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_GOLD).create("tool_hammer_gold", ModItems.TOOL_HAMMER_GOLD.getDefaultStack());
 		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.DIAMOND).create("tool_hammer_diamond", ModItems.TOOL_HAMMER_DIAMOND.getDefaultStack());
 		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("tool_hammer_steel", ModItems.TOOL_HAMMER_STEEL.getDefaultStack());
+		RecipeBuilderShaped netRecipe = new RecipeBuilderShaped(MOD_ID, "  W", " SW", "S " );
+		netRecipe.addInput('S', Items.STICK).addInput('W', "minecraft:wools").create("net", ModItems.NET.getDefaultStack());
 	}
 
 	@Override

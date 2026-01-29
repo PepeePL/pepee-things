@@ -20,6 +20,7 @@ public class ModItems {
 	public static Item TOOL_HAMMER_GOLD;
 	public static Item TOOL_HAMMER_DIAMOND;
 	public static Item TOOL_HAMMER_STEEL;
+	public static Item NET;
 
 
 	public void initItems(){
@@ -38,7 +39,8 @@ public class ModItems {
 		TOOL_HAMMER_DIAMOND = new ItemBuilder(MOD_ID)
 			.build(new ItemToolHammer("tool.hammer.diamond", "pepeethings:item/tool_hammer_diamond", itemID(), ToolMaterial.diamond));
 		TOOL_HAMMER_STEEL = new ItemBuilder(MOD_ID)
-			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID("TOOL_HAMMER_STEEL"), ToolMaterial.steel));
 			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID(), ToolMaterial.steel));
+		NET = new ItemBuilder(MOD_ID)
+			.build(new qapy.pepeethings.item.Net("net", "pepeethings:item/net", itemID()));
 	}
 }

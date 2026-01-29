@@ -6,6 +6,7 @@ import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelStandard;
+import qapy.pepeethings.client.model.ItemModelNet;
 import turniplabs.halplibe.helper.ModelHelper;
 import turniplabs.halplibe.util.ModelEntrypoint;
 
@@ -25,6 +26,7 @@ public class PepeeThingsModels implements ModelEntrypoint {
 		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_GOLD, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_GOLD, null).setIcon("pepeethings:item/tool_hammer_gold"));
 		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_DIAMOND, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_DIAMOND, null).setIcon("pepeethings:item/tool_hammer_diamond"));
 		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_STEEL, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_STEEL, null).setIcon("pepeethings:item/tool_hammer_steel"));
+		ModelHelper.setItemModel(ModItems.NET, () -> new ItemModelNet(ModItems.NET));
 	}
 
 	@Override
