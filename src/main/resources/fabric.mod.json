@@ -12,7 +12,7 @@
 		"sources": ""
 	},
 	"icon": "icon.png",
-	"license": "All Rights Reserved",
+	"license": "GPL-2.0",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
