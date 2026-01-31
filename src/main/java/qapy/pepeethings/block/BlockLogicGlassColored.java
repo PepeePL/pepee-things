@@ -18,9 +18,9 @@ public class BlockLogicGlassColored extends BlockLogicTransparent implements IPa
 	public BlockLogicGlassColored(Block<?> block) {
 		super(block, Material.glass);
 	}
+
 	@Override
 	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int meta, TileEntity tileEntity) {
-		System.out.println(isSolidRender());
 		switch (dropCause) {
 			case PICK_BLOCK:
 			case SILK_TOUCH:
@@ -28,11 +28,6 @@ public class BlockLogicGlassColored extends BlockLogicTransparent implements IPa
 			default:
 				return null;
 		}
-	}
-
-	@Override
-	public boolean isSolidRender() {
-		return false;
 	}
 
 	@Override

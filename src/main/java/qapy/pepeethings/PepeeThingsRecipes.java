@@ -1,17 +1,30 @@
 package qapy.pepeethings;
 
 import net.minecraft.core.block.Blocks;
+import net.minecraft.core.data.registry.Registries;
+import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.Items;
+import net.minecraft.core.util.helper.DyeColor;
 import qapy.pepeethings.util.RecipeBuilderDyeing;
 import turniplabs.halplibe.helper.RecipeBuilder;
 import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
 import turniplabs.halplibe.util.RecipeEntrypoint;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static qapy.pepeethings.PepeeThingsMod.MOD_ID;
 
 public class PepeeThingsRecipes implements RecipeEntrypoint {
 	@Override
 	public void onRecipesReady() {
+		List<ItemStack> glassStackList = new ArrayList<>();
+		glassStackList.add(Blocks.GLASS.getDefaultStack());
+		for (DyeColor color : DyeColor.values()) {
+			glassStackList.add(new ItemStack(ModBlocks.GLASS_COLORED, 1, color.blockMeta));
+		}
+		Registries.ITEM_GROUPS.register("pepeethings:glasses", glassStackList);
+
 		RecipeBuilderShaped chiselRecipe = new RecipeBuilderShaped(MOD_ID, "II", "SI" );
 		chiselRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_IRON).create("chisel", ModItems.CHISEL.getDefaultStack());
 		chiselRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("chisel_steel", ModItems.CHISEL_STEEL.getDefaultStack());

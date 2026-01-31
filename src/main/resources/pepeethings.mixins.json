@@ -8,8 +8,7 @@
   "mixins": [
     "ItemDyeMixin",
     "MobMixin",
-    "MenuInventoryCreativeMixin",
-    "RegistriesMixin"
+    "MenuInventoryCreativeMixin"
   ],
   "client": []
 }
