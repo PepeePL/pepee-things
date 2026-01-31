@@ -5,6 +5,7 @@ import net.minecraft.client.sound.SoundRepository;
 import net.minecraft.core.sound.SoundTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import qapy.pepeethings.block.ModBlockTags;
 import turniplabs.halplibe.util.ClientStartEntrypoint;
 import turniplabs.halplibe.util.GameStartEntrypoint;
 
@@ -23,6 +24,7 @@ public class PepeeThingsMod implements ModInitializer, GameStartEntrypoint, Clie
 		SoundTypes.loadSoundsJson(MOD_ID);
 		new ModBlocks().initBlocks();
 		new ModItems().initItems();
+		new ModBlockTags();
 	}
 
 	@Override

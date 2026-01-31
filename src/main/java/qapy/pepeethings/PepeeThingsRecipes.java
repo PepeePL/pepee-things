@@ -35,6 +35,13 @@ public class PepeeThingsRecipes implements RecipeEntrypoint {
 		glassDyeing.setInput("pepeethings:glasses").create("glass_dyeing", ModBlocks.GLASS_COLORED);
 		RecipeBuilderShaped chainRecipe = new RecipeBuilderShaped(MOD_ID, "S", "S");
 		chainRecipe.addInput('S', Items.CHAINLINK).create("chain", new ItemStack(ModItems.CHAIN, 8));
+		RecipeBuilderShaped sickleRecipe = new RecipeBuilderShaped(MOD_ID, " I ", "  I", "SI ");
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', "minecraft:planks").create("tool_sickle_wood", ModItems.TOOL_SICKLE_WOOD.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', "minecraft:cobblestones").create("tool_sickle_stone", ModItems.TOOL_SICKLE_STONE.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_IRON).create("tool_sickle_iron", ModItems.TOOL_SICKLE_IRON.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_GOLD).create("tool_sickle_gold", ModItems.TOOL_SICKLE_GOLD.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.DIAMOND).create("tool_sickle_diamond", ModItems.TOOL_SICKLE_DIAMOND.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("tool_sickle_steel", ModItems.TOOL_SICKLE_STEEL.getDefaultStack());
 	}
 
 	private void registerGroups(){

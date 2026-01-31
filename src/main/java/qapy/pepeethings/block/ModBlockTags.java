@@ -1,0 +1,54 @@
+package qapy.pepeethings.block;
+
+import net.minecraft.core.block.Block;
+import net.minecraft.core.block.Blocks;
+import net.minecraft.core.data.tag.Tag;
+
+import static net.minecraft.core.block.tag.BlockTags.TAG_LIST;
+
+public class ModBlockTags {
+	public static final Tag<Block<?>> SICKABLE_BLOCKS = Tag.of("pepeethings:sickable_blocks");
+	static {
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_OAK);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_OAK_RETRO);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_PINE);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_BIRCH);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_CHERRY);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_EUCALYPTUS);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_SHRUB);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_CHERRY_FLOWERING);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_CACAO);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_THORN);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_PALM);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_OAK);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_OAK_RETRO);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_PINE);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_BIRCH);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_CHERRY);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_EUCALYPTUS);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_SHRUB);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_CACAO);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_THORN);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_PALM);
+		SICKABLE_BLOCKS.tag(Blocks.TALLGRASS);
+		SICKABLE_BLOCKS.tag(Blocks.TALLGRASS_FERN);
+		SICKABLE_BLOCKS.tag(Blocks.DEADBUSH);
+		SICKABLE_BLOCKS.tag(Blocks.SPINIFEX);
+		SICKABLE_BLOCKS.tag(Blocks.ALGAE);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_YELLOW);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_RED);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_PINK);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_PURPLE);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_LIGHT_BLUE);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_ORANGE);
+		SICKABLE_BLOCKS.tag(Blocks.MUSHROOM_BROWN);
+		SICKABLE_BLOCKS.tag(Blocks.MUSHROOM_RED);
+		SICKABLE_BLOCKS.tag(Blocks.CROPS_WHEAT);
+		SICKABLE_BLOCKS.tag(Blocks.LAYER_LEAVES_OAK);
+		SICKABLE_BLOCKS.tag(Blocks.CACTUS);
+		SICKABLE_BLOCKS.tag(Blocks.SUGARCANE);
+		SICKABLE_BLOCKS.tag(Blocks.PUMPKIN);
+
+		TAG_LIST.add(SICKABLE_BLOCKS);
+	}
+}

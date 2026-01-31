@@ -20,7 +20,12 @@ public class ModItems {
 	public static Item TOOL_HAMMER_STEEL;
 	public static Item NET;
 	public static Item CHAIN;
-
+	public static Item TOOL_SICKLE_WOOD;
+	public static Item TOOL_SICKLE_STONE;
+	public static Item TOOL_SICKLE_IRON;
+	public static Item TOOL_SICKLE_GOLD;
+	public static Item TOOL_SICKLE_DIAMOND;
+	public static Item TOOL_SICKLE_STEEL;
 
 	public void initItems(){
 		CHISEL = new ItemBuilder(MOD_ID)
@@ -41,6 +46,18 @@ public class ModItems {
 			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID(), ToolMaterial.steel));
 		NET = new ItemBuilder(MOD_ID)
 			.build(new Net("net", "pepeethings:item/net", itemID()));
+		TOOL_SICKLE_WOOD = new ItemBuilder(MOD_ID)
+			.build(new Sickle("tool.sickle.wood", "pepeethings:item/tool_sickle_wood", itemID(), 2, ToolMaterial.wood));
+		TOOL_SICKLE_STONE = new ItemBuilder(MOD_ID)
+			.build(new Sickle("tool.sickle.stone", "pepeethings:item/tool_sickle_stone", itemID(), 2, ToolMaterial.stone));
+		TOOL_SICKLE_IRON = new ItemBuilder(MOD_ID)
+			.build(new Sickle("tool.sickle.iron", "pepeethings:item/tool_sickle_iron", itemID(), 2, ToolMaterial.iron));
+		TOOL_SICKLE_GOLD = new ItemBuilder(MOD_ID)
+			.build(new Sickle("tool.sickle.gold", "pepeethings:item/tool_sickle_gold", itemID(), 2, ToolMaterial.gold));
+		TOOL_SICKLE_DIAMOND = new ItemBuilder(MOD_ID)
+			.build(new Sickle("tool.sickle.diamond", "pepeethings:item/tool_sickle_diamond", itemID(), 2, ToolMaterial.diamond));
+		TOOL_SICKLE_STEEL = new ItemBuilder(MOD_ID)
+			.build(new Sickle("tool.sickle.steel", "pepeethings:item/tool_sickle_steel", itemID(), 2, ToolMaterial.steel));
 		CHAIN = new ItemBuilder(MOD_ID)
 			.build(new ItemRope("chain", "pepeethings:item/chain", itemID(), ModBlocks.CHAIN));
 	}

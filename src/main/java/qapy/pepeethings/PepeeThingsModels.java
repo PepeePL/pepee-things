@@ -31,6 +31,12 @@ public class PepeeThingsModels implements ModelEntrypoint {
 		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_STEEL, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_STEEL, null).setIcon("pepeethings:item/tool_hammer_steel"));
 		ModelHelper.setItemModel(ModItems.NET, () -> new ItemModelNet(ModItems.NET));
 		ModelHelper.setItemModel(ModItems.CHAIN, () -> new ItemModelStandard(ModItems.CHAIN, null).setIcon("pepeethings:item/chain"));
+		ModelHelper.setItemModel(ModItems.TOOL_SICKLE_WOOD, () -> new ItemModelStandard(ModItems.TOOL_SICKLE_WOOD, null).setIcon("pepeethings:item/tool_sickle_wood"));
+		ModelHelper.setItemModel(ModItems.TOOL_SICKLE_STONE, () -> new ItemModelStandard(ModItems.TOOL_SICKLE_STONE, null).setIcon("pepeethings:item/tool_sickle_stone"));
+		ModelHelper.setItemModel(ModItems.TOOL_SICKLE_IRON, () -> new ItemModelStandard(ModItems.TOOL_SICKLE_IRON, null).setIcon("pepeethings:item/tool_sickle_iron"));
+		ModelHelper.setItemModel(ModItems.TOOL_SICKLE_GOLD, () -> new ItemModelStandard(ModItems.TOOL_SICKLE_GOLD, null).setIcon("pepeethings:item/tool_sickle_gold"));
+		ModelHelper.setItemModel(ModItems.TOOL_SICKLE_DIAMOND, () -> new ItemModelStandard(ModItems.TOOL_SICKLE_DIAMOND, null).setIcon("pepeethings:item/tool_sickle_diamond"));
+		ModelHelper.setItemModel(ModItems.TOOL_SICKLE_STEEL, () -> new ItemModelStandard(ModItems.TOOL_SICKLE_STEEL, null).setIcon("pepeethings:item/tool_sickle_steel"));
 	}
 
 	@Override
