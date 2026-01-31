@@ -32,7 +32,6 @@ public abstract class MobMixin {
 			} else {
 				this.chatColor = 0;
 			}
-
 			this.setNickname(StringUtils.substring(item.getCustomName(), 0, 32));
 			return false;
 		}else if ((Object) this instanceof MobChicken) {
@@ -42,6 +41,7 @@ public abstract class MobMixin {
 		}
 		return false;
 	}
+
 	private boolean chickenInteract(@NotNull Player player) {
 		ItemStack item = player.inventory.getCurrentItem();
 		if (item != null && item.itemID == ModItems.NET.id) {
@@ -56,5 +56,4 @@ public abstract class MobMixin {
 		}
 		return false;
 	}
-
 }

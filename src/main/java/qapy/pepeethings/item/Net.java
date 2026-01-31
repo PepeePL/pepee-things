@@ -15,6 +15,7 @@ public class Net extends Item {
 		super(translationKey, namespaceId, id);
 		this.setMaxStackSize(1);
 	}
+
 	@Override
 	public boolean onUseItemOnBlock(ItemStack itemStack, Player player, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
 		if(itemStack.getMetadata() == 1){
@@ -32,6 +33,7 @@ public class Net extends Item {
 		}
 		return false;
 	}
+
 	public void spawnEntity(ItemStack itemStack, World world, double x, double y, double z) {
 		Entity entity = EntityDispatcher.createEntityFromNBT(itemStack.getData(), world);
 		if (entity != null) {
@@ -41,6 +43,7 @@ public class Net extends Item {
 		}
 
 	}
+
 	@Override
 	public String getLanguageKey(ItemStack itemstack) {
 		return itemstack.getMetadata() == 1 ? "item.pepeethings.net_full" : "item.pepeethings.net";

@@ -18,12 +18,7 @@ import static qapy.pepeethings.PepeeThingsMod.MOD_ID;
 public class PepeeThingsRecipes implements RecipeEntrypoint {
 	@Override
 	public void onRecipesReady() {
-		List<ItemStack> glassStackList = new ArrayList<>();
-		glassStackList.add(Blocks.GLASS.getDefaultStack());
-		for (DyeColor color : DyeColor.values()) {
-			glassStackList.add(new ItemStack(ModBlocks.GLASS_COLORED, 1, color.blockMeta));
-		}
-		Registries.ITEM_GROUPS.register("pepeethings:glasses", glassStackList);
+		registerGroups();
 
 		RecipeBuilderShaped chiselRecipe = new RecipeBuilderShaped(MOD_ID, "II", "SI" );
 		chiselRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_IRON).create("chisel", ModItems.CHISEL.getDefaultStack());
@@ -40,6 +35,15 @@ public class PepeeThingsRecipes implements RecipeEntrypoint {
 		glassDyeing.setInput("pepeethings:glasses").create("glass_dyeing", ModBlocks.GLASS_COLORED);
 		RecipeBuilderShaped chainRecipe = new RecipeBuilderShaped(MOD_ID, "S", "S");
 		chainRecipe.addInput('S', Items.CHAINLINK).create("chain", new ItemStack(ModItems.CHAIN, 8));
+	}
+
+	private void registerGroups(){
+		List<ItemStack> glassStackList = new ArrayList<>();
+		glassStackList.add(Blocks.GLASS.getDefaultStack());
+		for (DyeColor color : DyeColor.values()) {
+			glassStackList.add(new ItemStack(ModBlocks.GLASS_COLORED, 1, color.blockMeta));
+		}
+		Registries.ITEM_GROUPS.register("pepeethings:glasses", glassStackList);
 	}
 
 	@Override

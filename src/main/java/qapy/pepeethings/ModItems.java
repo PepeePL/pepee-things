@@ -24,9 +24,9 @@ public class ModItems {
 
 	public void initItems(){
 		CHISEL = new ItemBuilder(MOD_ID)
-			.build(new Chisel("chisel", "pepeethings:item/chisel", itemID()));
+			.build(new Chisel("chisel", "pepeethings:item/chisel", itemID(), true));
 		CHISEL_STEEL = new ItemBuilder(MOD_ID)
-			.build(new SteelChisel("chisel.steel", "pepeethings:item/chisel_steel", itemID()));
+			.build(new Chisel("chisel.steel", "pepeethings:item/chisel_steel", itemID(), false));
 		MOSS = new ItemBuilder(MOD_ID)
 			.build(new Moss("moss", "pepeethings:item/moss", itemID()));
 		TOOL_HAMMER_STONE = new ItemBuilder(MOD_ID)

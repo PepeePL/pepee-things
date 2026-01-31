@@ -17,6 +17,7 @@ public class BlockLogicChain extends BlockLogicRope {
 		super(block);
 		this.material = Material.metal;
 	}
+
 	@Override
 	public boolean onBlockRightClicked(World world, int x, int y, int z, Player player, Side side, double xPlaced, double yPlaced) {
 		ItemStack heldItem = player.getHeldItem();
@@ -28,7 +29,6 @@ public class BlockLogicChain extends BlockLogicRope {
 			if (heldItem.stackSize <= 0) {
 				player.destroyCurrentEquippedItem();
 			}
-
 			return true;
 		} else {
 			return false;

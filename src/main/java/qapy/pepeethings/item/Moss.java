@@ -11,6 +11,7 @@ public class Moss extends Item {
 	public Moss(String name, String namespaceId, int id) {
 		super(name, namespaceId, id);
 	}
+
 	@Override
 	public boolean onUseItemOnBlock(ItemStack itemstack, Player entityplayer, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced) {
 		return useMoss(itemstack, entityplayer, world, blockX, blockY, blockZ);
@@ -29,6 +30,5 @@ public class Moss extends Item {
 			}
 		}
 		return false;
-
 	}
 }

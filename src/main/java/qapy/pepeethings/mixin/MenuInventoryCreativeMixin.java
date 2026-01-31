@@ -26,6 +26,7 @@ public abstract class MenuInventoryCreativeMixin extends MenuInventory {
 	protected MenuInventoryCreativeMixin(ContainerInventory inventory) {
 		super(inventory);
 	}
+
 	@Inject(method = "<clinit>", at = @At("TAIL"))
 	private static void modItems(CallbackInfo ci) {
 		List<ItemStack> newCreativeItems = new ArrayList<>();
@@ -40,5 +41,4 @@ public abstract class MenuInventoryCreativeMixin extends MenuInventory {
 		creativeItems = newCreativeItems;
 		creativeItemsCount = creativeItems.size();
 	}
-
 }

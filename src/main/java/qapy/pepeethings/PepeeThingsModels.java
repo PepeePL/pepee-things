@@ -17,7 +17,6 @@ public class PepeeThingsModels implements ModelEntrypoint {
 	public void initBlockModels(BlockModelDispatcher dispatcher) {
 		ModelHelper.setBlockModel(ModBlocks.GLASS_COLORED, () -> new BlockModelGlassColored<>(ModBlocks.GLASS_COLORED, false).onRenderLayer(1));
 		ModelHelper.setBlockModel(ModBlocks.CHAIN, () -> new BlockModelChain<>(ModBlocks.CHAIN).setAllTextures(0, "pepeethings:block/chain"));
-
 	}
 
 	@Override

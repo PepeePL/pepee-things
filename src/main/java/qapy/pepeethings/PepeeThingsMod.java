@@ -11,6 +11,7 @@ import turniplabs.halplibe.util.GameStartEntrypoint;
 public class PepeeThingsMod implements ModInitializer, GameStartEntrypoint, ClientStartEntrypoint {
 	public static final String MOD_ID = "pepeethings";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Pepee Things initialized.");
@@ -26,6 +27,7 @@ public class PepeeThingsMod implements ModInitializer, GameStartEntrypoint, Clie
 
 	@Override
 	public void afterGameStart() {}
+
 	@Override
 	public void beforeClientStart() {
 		SoundRepository.registerNamespace(MOD_ID);

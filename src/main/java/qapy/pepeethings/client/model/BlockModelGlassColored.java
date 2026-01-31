@@ -21,12 +21,9 @@ public class BlockModelGlassColored<T extends BlockLogic> extends BlockModelTran
 		return texCoords[data & 15];
 	}
 
-
-
 	static {
 		for(DyeColor c : DyeColor.blockOrderedColors()) {
 			texCoords[c.blockMeta] = TextureRegistry.getTexture("pepeethings:block/glass/" + c.colorID);
 		}
-
 	}
 }

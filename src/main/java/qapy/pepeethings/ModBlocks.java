@@ -2,7 +2,6 @@ package qapy.pepeethings;
 
 
 import net.minecraft.core.block.Block;
-import net.minecraft.core.block.BlockLogic;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Items;
 import net.minecraft.core.item.block.ItemBlockPainted;

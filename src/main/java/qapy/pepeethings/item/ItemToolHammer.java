@@ -22,6 +22,8 @@ public class ItemToolHammer extends ItemTool {
 			.setMiningLevel(getMaterial().getMiningLevel())
 			.setSilkTouch(isSilkTouch());
 	}
+
+	@Override
 	public boolean canHarvestBlock(Mob mob, ItemStack itemStack, Block<?> block) {
 		Integer miningLevel = miningLevels.get(block);
 		if (miningLevel != null) {
@@ -30,6 +32,8 @@ public class ItemToolHammer extends ItemTool {
 			return block.hasTag(BlockTags.MINEABLE_BY_PICKAXE);
 		}
 	}
+
+	@Override
 	public boolean onBlockDestroyed(World world, ItemStack itemstack, int i, int x, int y, int z, Side side, Mob mob) {
 		Block<?> block = Blocks.blocksList[i];
 		Player player = (Player) mob;
@@ -89,5 +93,4 @@ public class ItemToolHammer extends ItemTool {
 			}
 		return true;
 	}
-
 }
