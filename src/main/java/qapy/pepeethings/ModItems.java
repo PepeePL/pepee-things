@@ -1,6 +1,7 @@
 package qapy.pepeethings;
 
 import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemRope;
 import net.minecraft.core.item.material.ToolMaterial;
 import qapy.pepeethings.item.*;
 import turniplabs.halplibe.helper.ItemBuilder;
@@ -18,6 +19,7 @@ public class ModItems {
 	public static Item TOOL_HAMMER_DIAMOND;
 	public static Item TOOL_HAMMER_STEEL;
 	public static Item NET;
+	public static Item CHAIN;
 
 
 	public void initItems(){
@@ -39,5 +41,7 @@ public class ModItems {
 			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID(), ToolMaterial.steel));
 		NET = new ItemBuilder(MOD_ID)
 			.build(new Net("net", "pepeethings:item/net", itemID()));
+		CHAIN = new ItemBuilder(MOD_ID)
+			.build(new ItemRope("chain", "pepeethings:item/chain", itemID(), ModBlocks.CHAIN));
 	}
 }

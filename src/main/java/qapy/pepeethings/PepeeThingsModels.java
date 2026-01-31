@@ -6,6 +6,7 @@ import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelStandard;
+import qapy.pepeethings.client.model.BlockModelChain;
 import qapy.pepeethings.client.model.BlockModelGlassColored;
 import qapy.pepeethings.client.model.ItemModelNet;
 import turniplabs.halplibe.helper.ModelHelper;
@@ -15,6 +16,7 @@ public class PepeeThingsModels implements ModelEntrypoint {
 	@Override
 	public void initBlockModels(BlockModelDispatcher dispatcher) {
 		ModelHelper.setBlockModel(ModBlocks.GLASS_COLORED, () -> new BlockModelGlassColored<>(ModBlocks.GLASS_COLORED, false).onRenderLayer(1));
+		ModelHelper.setBlockModel(ModBlocks.CHAIN, () -> new BlockModelChain<>(ModBlocks.CHAIN).setAllTextures(0, "pepeethings:block/chain"));
 
 	}
 
@@ -29,6 +31,7 @@ public class PepeeThingsModels implements ModelEntrypoint {
 		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_DIAMOND, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_DIAMOND, null).setIcon("pepeethings:item/tool_hammer_diamond"));
 		ModelHelper.setItemModel(ModItems.TOOL_HAMMER_STEEL, () -> new ItemModelStandard(ModItems.TOOL_HAMMER_STEEL, null).setIcon("pepeethings:item/tool_hammer_steel"));
 		ModelHelper.setItemModel(ModItems.NET, () -> new ItemModelNet(ModItems.NET));
+		ModelHelper.setItemModel(ModItems.CHAIN, () -> new ItemModelStandard(ModItems.CHAIN, null).setIcon("pepeethings:item/chain"));
 	}
 
 	@Override

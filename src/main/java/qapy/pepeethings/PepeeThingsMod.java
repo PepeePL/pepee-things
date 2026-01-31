@@ -20,8 +20,8 @@ public class PepeeThingsMod implements ModInitializer, GameStartEntrypoint, Clie
 	@Override
 	public void beforeGameStart() {
 		SoundTypes.loadSoundsJson(MOD_ID);
-		new ModItems().initItems();
 		new ModBlocks().initBlocks();
+		new ModItems().initItems();
 	}
 
 	@Override

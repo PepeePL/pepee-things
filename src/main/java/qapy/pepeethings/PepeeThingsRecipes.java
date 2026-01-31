@@ -38,6 +38,8 @@ public class PepeeThingsRecipes implements RecipeEntrypoint {
 		netRecipe.addInput('S', Items.STICK).addInput('W', "minecraft:wools").create("net", ModItems.NET.getDefaultStack());
 		RecipeBuilderDyeing glassDyeing = new RecipeBuilderDyeing(MOD_ID);
 		glassDyeing.setInput("pepeethings:glasses").create("glass_dyeing", ModBlocks.GLASS_COLORED);
+		RecipeBuilderShaped chainRecipe = new RecipeBuilderShaped(MOD_ID, "S", "S");
+		chainRecipe.addInput('S', Items.CHAINLINK).create("chain", new ItemStack(ModItems.CHAIN, 8));
 	}
 
 	@Override

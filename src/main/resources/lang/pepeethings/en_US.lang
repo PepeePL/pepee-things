@@ -18,6 +18,8 @@ item.pepeethings.net.name=Catching Net
 item.pepeethings.net.desc=Used to catch chickens.
 item.pepeethings.net_full.name=Catching Net
 item.pepeethings.net_full.desc=Used to catch chickens. Bwak-Bwak!
+item.pepeethings.chain.name=Chain
+item.pepeethings.chain.desc=Who needs ropes when you have chains?
 
 tile.pepeethings.glass.colored.black.name=Black Glass
 tile.pepeethings.glass.colored.black.desc=Colored glass, dyed black.
