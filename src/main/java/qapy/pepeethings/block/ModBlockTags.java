@@ -8,7 +8,20 @@ import static net.minecraft.core.block.tag.BlockTags.TAG_LIST;
 
 public class ModBlockTags {
 	public static final Tag<Block<?>> SICKABLE_BLOCKS = Tag.of("pepeethings:sickable_blocks");
+	public static final Tag<Block<?>> LEAVES = Tag.of("pepeethings:leaves");
 	static {
+		LEAVES.tag(Blocks.LEAVES_OAK);
+		LEAVES.tag(Blocks.LEAVES_OAK_RETRO);
+		LEAVES.tag(Blocks.LEAVES_PINE);
+		LEAVES.tag(Blocks.LEAVES_BIRCH);
+		LEAVES.tag(Blocks.LEAVES_CHERRY);
+		LEAVES.tag(Blocks.LEAVES_EUCALYPTUS);
+		LEAVES.tag(Blocks.LEAVES_SHRUB);
+		LEAVES.tag(Blocks.LEAVES_CHERRY_FLOWERING);
+		LEAVES.tag(Blocks.LEAVES_CACAO);
+		LEAVES.tag(Blocks.LEAVES_THORN);
+		LEAVES.tag(Blocks.LEAVES_PALM);
+
 		SICKABLE_BLOCKS.tag(Blocks.LEAVES_OAK);
 		SICKABLE_BLOCKS.tag(Blocks.LEAVES_OAK_RETRO);
 		SICKABLE_BLOCKS.tag(Blocks.LEAVES_PINE);
@@ -50,5 +63,6 @@ public class ModBlockTags {
 		SICKABLE_BLOCKS.tag(Blocks.PUMPKIN);
 
 		TAG_LIST.add(SICKABLE_BLOCKS);
+		TAG_LIST.add(LEAVES);
 	}
 }

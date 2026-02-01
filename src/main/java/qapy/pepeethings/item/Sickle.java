@@ -1,10 +1,12 @@
 package qapy.pepeethings.item;
 
 import net.minecraft.core.block.Block;
+import net.minecraft.core.block.BlockLogicFlowerStackable;
 import net.minecraft.core.block.Blocks;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.entity.Mob;
 import net.minecraft.core.entity.player.Player;
+import net.minecraft.core.enums.EnumDropCause;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.item.tool.ItemTool;
@@ -32,6 +34,8 @@ public class Sickle extends ItemTool {
 						int targetBlockID = world.getBlockId(bx, by, bz);
 						Block<?> targetBlock = Blocks.blocksList[targetBlockID];
 						if (targetBlock != null && targetBlock.hasTag(ModBlockTags.SICKABLE_BLOCKS)) {
+							boolean isLeaves = block.hasTag(ModBlockTags.LEAVES);
+							if((isLeaves && !targetBlock.hasTag(ModBlockTags.LEAVES)) || (!isLeaves && targetBlock.hasTag(ModBlockTags.LEAVES))) continue;
 							int targetMeta = world.getBlockMetadata(bx, by, bz);
 							if(targetBlock == Blocks.CROPS_WHEAT && targetMeta != 7) continue;
 							if (itemstack.stackSize <= 0) {
@@ -40,7 +44,11 @@ public class Sickle extends ItemTool {
 							}
 							itemstack.damageItem(3, player);
 							if (player.getGamemode().dropBlockOnBreak()){
-								targetBlock.harvestBlock(world, player, bx, by, bz, targetMeta, null);
+								if((Block.hasLogicClass(targetBlock, BlockLogicFlowerStackable.class)) && targetMeta > 0){
+									targetBlock.dropBlockWithCause(world, EnumDropCause.PROPER_TOOL, bx, by, bz, targetMeta, null, player);
+								}else{
+									targetBlock.harvestBlock(world, player, bx, by, bz, targetMeta, null);
+								}
 							}
 							world.setBlockWithNotify(bx, by, bz, 0);
 						}
