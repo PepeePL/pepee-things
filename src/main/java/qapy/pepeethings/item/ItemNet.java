@@ -10,8 +10,8 @@ import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.util.phys.HitResult;
 import net.minecraft.core.world.World;
 
-public class Net extends Item {
-	public Net(String translationKey, String namespaceId, int id) {
+public class ItemNet extends Item {
+	public ItemNet(String translationKey, String namespaceId, int id) {
 		super(translationKey, namespaceId, id);
 		this.setMaxStackSize(1);
 	}

@@ -7,8 +7,8 @@ import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 import qapy.pepeethings.util.MossRegistry;
 
-public class Moss extends Item {
-	public Moss(String name, String namespaceId, int id) {
+public class ItemMoss extends Item {
+	public ItemMoss(String name, String namespaceId, int id) {
 		super(name, namespaceId, id);
 	}
 

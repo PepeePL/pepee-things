@@ -7,9 +7,9 @@ import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 import qapy.pepeethings.util.ChiselRegistry;
 
-public class Chisel extends Item {
+public class ItemChisel extends Item {
 	private final boolean hasDurability;
-	public Chisel(String name, String namespaceId, int id, boolean hasDurability) {
+	public ItemChisel(String name, String namespaceId, int id, boolean hasDurability) {
 		super(name, namespaceId, id);
 		this.hasDurability = hasDurability;
 		setMaxStackSize(1);

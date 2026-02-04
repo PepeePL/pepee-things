@@ -1,7 +1,9 @@
 package qapy.pepeethings;
 
 import net.minecraft.core.item.Item;
+import net.minecraft.core.item.ItemFood;
 import net.minecraft.core.item.ItemRope;
+import net.minecraft.core.item.ItemSeeds;
 import net.minecraft.core.item.material.ToolMaterial;
 import qapy.pepeethings.item.*;
 import turniplabs.halplibe.helper.ItemBuilder;
@@ -26,14 +28,20 @@ public class ModItems {
 	public static Item TOOL_SICKLE_GOLD;
 	public static Item TOOL_SICKLE_DIAMOND;
 	public static Item TOOL_SICKLE_STEEL;
+	public static Item SEEDS_CARROT;
+	public static Item CARROT;
+	public static Item SEEDS_POTATO;
+	public static Item POTATO;
+	public static Item TOMATO;
+	public static Item SEEDS_TOMATO;
 
 	public void initItems(){
 		CHISEL = new ItemBuilder(MOD_ID)
-			.build(new Chisel("chisel", "pepeethings:item/chisel", itemID(), true));
+			.build(new ItemChisel("chisel", "pepeethings:item/chisel", itemID(), true));
 		CHISEL_STEEL = new ItemBuilder(MOD_ID)
-			.build(new Chisel("chisel.steel", "pepeethings:item/chisel_steel", itemID(), false));
+			.build(new ItemChisel("chisel.steel", "pepeethings:item/chisel_steel", itemID(), false));
 		MOSS = new ItemBuilder(MOD_ID)
-			.build(new Moss("moss", "pepeethings:item/moss", itemID()));
+			.build(new ItemMoss("moss", "pepeethings:item/moss", itemID()));
 		TOOL_HAMMER_STONE = new ItemBuilder(MOD_ID)
 			.build(new ItemToolHammer("tool.hammer.stone", "pepeethings:item/tool_hammer_stone", itemID(), ToolMaterial.stone));
 		TOOL_HAMMER_IRON = new ItemBuilder(MOD_ID)
@@ -45,19 +53,19 @@ public class ModItems {
 		TOOL_HAMMER_STEEL = new ItemBuilder(MOD_ID)
 			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID(), ToolMaterial.steel));
 		NET = new ItemBuilder(MOD_ID)
-			.build(new Net("net", "pepeethings:item/net", itemID()));
+			.build(new ItemNet("net", "pepeethings:item/net", itemID()));
 		TOOL_SICKLE_WOOD = new ItemBuilder(MOD_ID)
-			.build(new Sickle("tool.sickle.wood", "pepeethings:item/tool_sickle_wood", itemID(), 2, ToolMaterial.wood));
+			.build(new ItemSickle("tool.sickle.wood", "pepeethings:item/tool_sickle_wood", itemID(), 2, ToolMaterial.wood));
 		TOOL_SICKLE_STONE = new ItemBuilder(MOD_ID)
-			.build(new Sickle("tool.sickle.stone", "pepeethings:item/tool_sickle_stone", itemID(), 2, ToolMaterial.stone));
+			.build(new ItemSickle("tool.sickle.stone", "pepeethings:item/tool_sickle_stone", itemID(), 2, ToolMaterial.stone));
 		TOOL_SICKLE_IRON = new ItemBuilder(MOD_ID)
-			.build(new Sickle("tool.sickle.iron", "pepeethings:item/tool_sickle_iron", itemID(), 2, ToolMaterial.iron));
+			.build(new ItemSickle("tool.sickle.iron", "pepeethings:item/tool_sickle_iron", itemID(), 2, ToolMaterial.iron));
 		TOOL_SICKLE_GOLD = new ItemBuilder(MOD_ID)
-			.build(new Sickle("tool.sickle.gold", "pepeethings:item/tool_sickle_gold", itemID(), 2, ToolMaterial.gold));
+			.build(new ItemSickle("tool.sickle.gold", "pepeethings:item/tool_sickle_gold", itemID(), 2, ToolMaterial.gold));
 		TOOL_SICKLE_DIAMOND = new ItemBuilder(MOD_ID)
-			.build(new Sickle("tool.sickle.diamond", "pepeethings:item/tool_sickle_diamond", itemID(), 2, ToolMaterial.diamond));
+			.build(new ItemSickle("tool.sickle.diamond", "pepeethings:item/tool_sickle_diamond", itemID(), 2, ToolMaterial.diamond));
 		TOOL_SICKLE_STEEL = new ItemBuilder(MOD_ID)
-			.build(new Sickle("tool.sickle.steel", "pepeethings:item/tool_sickle_steel", itemID(), 2, ToolMaterial.steel));
+			.build(new ItemSickle("tool.sickle.steel", "pepeethings:item/tool_sickle_steel", itemID(), 2, ToolMaterial.steel));
 		CHAIN = new ItemBuilder(MOD_ID)
 			.build(new ItemRope("chain", "pepeethings:item/chain", itemID(), ModBlocks.CHAIN));
 	}

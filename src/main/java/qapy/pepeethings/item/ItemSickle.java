@@ -15,8 +15,8 @@ import net.minecraft.core.util.phys.AABB;
 import net.minecraft.core.world.World;
 import qapy.pepeethings.block.ModBlockTags;
 
-public class Sickle extends ItemTool {
-	public Sickle(String name, String namespaceId, int id, int damageDealt, ToolMaterial toolMaterial) {
+public class ItemSickle extends ItemTool {
+	public ItemSickle(String name, String namespaceId, int id, int damageDealt, ToolMaterial toolMaterial) {
 		super(name, namespaceId, id, damageDealt, toolMaterial, BlockTags.MINEABLE_BY_HOE);
 	}
 
