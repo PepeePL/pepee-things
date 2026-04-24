@@ -7,7 +7,9 @@ import net.minecraft.core.item.Items;
 import net.minecraft.core.util.helper.DyeColor;
 import qapy.pepeethings.util.RecipeBuilderDyeing;
 import turniplabs.halplibe.helper.RecipeBuilder;
+import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderFurnace;
 import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
+import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShapeless;
 import turniplabs.halplibe.util.RecipeEntrypoint;
 
 import java.util.ArrayList;
@@ -42,6 +44,18 @@ public class PepeeThingsRecipes implements RecipeEntrypoint {
 		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_GOLD).create("tool_sickle_gold", ModItems.TOOL_SICKLE_GOLD.getDefaultStack());
 		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.DIAMOND).create("tool_sickle_diamond", ModItems.TOOL_SICKLE_DIAMOND.getDefaultStack());
 		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("tool_sickle_steel", ModItems.TOOL_SICKLE_STEEL.getDefaultStack());
+		RecipeBuilderFurnace potatoBakedRecipe = new RecipeBuilderFurnace(MOD_ID);
+		potatoBakedRecipe.setInput(ModItems.POTATO).create("potato_baked", ModItems.POTATO_BAKED.getDefaultStack());
+		RecipeBuilderShaped carrotIronRecipe = new RecipeBuilderShaped(MOD_ID, "III", "ICI", "III");
+		carrotIronRecipe.addInput('C', ModItems.CARROT).addInput('I', Items.INGOT_IRON).create("carrot_iron", ModItems.CARROT_IRON.getDefaultStack());
+		RecipeBuilderShapeless sandwichMeatRecipe = new RecipeBuilderShapeless(MOD_ID);
+		RecipeBuilderShapeless sandwichTomatoRecipe = new RecipeBuilderShapeless(MOD_ID);
+		sandwichMeatRecipe.addInput(Items.FOOD_BREAD).addInput(Items.FOOD_PORKCHOP_COOKED).create("sandwich_meat", ModItems.SANDWICH_MEAT.getDefaultStack());
+		sandwichTomatoRecipe.addInput(Items.FOOD_BREAD).addInput(ModItems.TOMATO).create("sandwich_tomato", ModItems.SANDWICH_TOMATO.getDefaultStack());
+		RecipeBuilderShapeless stewMeatRecipe = new RecipeBuilderShapeless(MOD_ID);
+		stewMeatRecipe.addInput(Items.BOWL).addInput(Items.FOOD_PORKCHOP_COOKED).addInput(ModItems.CARROT).addInput(ModItems.POTATO).create("stew_meat", ModItems.STEW_MEAT.getDefaultStack());
+		RecipeBuilderShapeless soupTomatoRecipe = new RecipeBuilderShapeless(MOD_ID);
+		soupTomatoRecipe.addInput(Items.BOWL).addInput(ModItems.TOMATO).addInput(ModItems.TOMATO).create("soup_tomato", ModItems.SOUP_TOMATO.getDefaultStack());
 	}
 
 	private void registerGroups(){

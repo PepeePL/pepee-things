@@ -7,8 +7,9 @@
   },
   "mixins": [
     "ItemDyeMixin",
-    "MobMixin",
-    "MenuInventoryCreativeMixin"
+    "ItemToolHoeMixin",
+    "MenuInventoryCreativeMixin",
+    "MobMixin"
   ],
   "client": []
 }

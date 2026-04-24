@@ -1,0 +1,13 @@
+package qapy.pepeethings;
+
+import net.minecraft.core.util.collection.NamespaceID;
+import qapy.pepeethings.block.entity.TileEntityCrate;
+import turniplabs.halplibe.helper.EntityHelper;
+
+import static qapy.pepeethings.PepeeThingsMod.MOD_ID;
+
+public class ModEntities {
+	public void initEntities() {
+		EntityHelper.createTileEntity(TileEntityCrate.class, NamespaceID.getPermanent(MOD_ID, "crate"));
+	}
+}

@@ -1,9 +1,6 @@
 package qapy.pepeethings;
 
-import net.minecraft.core.item.Item;
-import net.minecraft.core.item.ItemFood;
-import net.minecraft.core.item.ItemRope;
-import net.minecraft.core.item.ItemSeeds;
+import net.minecraft.core.item.*;
 import net.minecraft.core.item.material.ToolMaterial;
 import qapy.pepeethings.item.*;
 import turniplabs.halplibe.helper.ItemBuilder;
@@ -32,8 +29,15 @@ public class ModItems {
 	public static Item CARROT;
 	public static Item SEEDS_POTATO;
 	public static Item POTATO;
+	public static Item POTATO_BAKED;
 	public static Item TOMATO;
 	public static Item SEEDS_TOMATO;
+	public static Item SANDWICH_MEAT;
+	public static Item SANDWICH_TOMATO;
+	public static Item STEW_MEAT;
+	public static Item SOUP_TOMATO;
+	public static Item CARROT_IRON;
+	public static Item CRATE;
 
 	public void initItems(){
 		CHISEL = new ItemBuilder(MOD_ID)
@@ -68,5 +72,31 @@ public class ModItems {
 			.build(new ItemSickle("tool.sickle.steel", "pepeethings:item/tool_sickle_steel", itemID(), 2, ToolMaterial.steel));
 		CHAIN = new ItemBuilder(MOD_ID)
 			.build(new ItemRope("chain", "pepeethings:item/chain", itemID(), ModBlocks.CHAIN));
+		SEEDS_CARROT = new ItemBuilder(MOD_ID)
+			.build(new ItemSeeds("seeds.carrot", "pepeethings:item/seeds_carrot", itemID(), ModBlocks.CROPS_CARROT));
+		CARROT = new ItemBuilder(MOD_ID)
+			.build(new ItemFood("carrot", "pepeethings:item/carrot", itemID(), 3, 8, false, 8));
+		SEEDS_POTATO = new ItemBuilder(MOD_ID)
+			.build(new ItemSeeds("seeds.potato", "pepeethings:item/seeds_potato", itemID(), ModBlocks.CROPS_POTATO));
+		POTATO = new ItemBuilder(MOD_ID)
+			.build(new ItemFood("potato", "pepeethings:item/potato", itemID(), 1, 6, false, 8));
+		POTATO_BAKED = new ItemBuilder(MOD_ID)
+			.build(new ItemFood("potato.baked", "pepeethings:item/potato_baked", itemID(), 5, 10, false, 8));
+		SEEDS_TOMATO = new ItemBuilder(MOD_ID)
+			.build(new ItemSeeds("seeds.tomato", "pepeethings:item/seeds_tomato", itemID(), ModBlocks.CROPS_TOMATO));
+		TOMATO = new ItemBuilder(MOD_ID)
+			.build(new ItemFood("tomato", "pepeethings:item/tomato", itemID(), 2, 8, false, 8));
+		SANDWICH_MEAT = new ItemBuilder(MOD_ID)
+			.build(new ItemFoodPortioned("sandwich.meat", "pepeethings:item/sandwich_meat", itemID(), 8, 16, 2));
+		SANDWICH_TOMATO = new ItemBuilder(MOD_ID)
+			.build(new ItemFoodPortioned("sandwich.tomato", "pepeethings:item/sandwich_tomato", itemID(), 6, 16, 2));
+		STEW_MEAT = new ItemBuilder(MOD_ID)
+			.build(new ItemSoup("stew.meat", "pepeethings:item/stew_meat", itemID(), 12, 16));
+		SOUP_TOMATO = new ItemBuilder(MOD_ID)
+			.build(new ItemSoup("soup.tomato", "pepeethings:item/soup_tomato", itemID(), 10, 16));
+		CARROT_IRON = new ItemBuilder(MOD_ID)
+			.build(new ItemFood("carrot.iron", "pepeethings:item/carrot_iron", itemID(), 7, 0, false, 2));
+		CRATE = new ItemBuilder(MOD_ID)
+			.build(new ItemPlaceable("crate", "pepeethings:item/crate", itemID(), ModBlocks.CRATE));
 	}
 }

@@ -3,12 +3,14 @@ package qapy.pepeethings.block;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.Blocks;
 import net.minecraft.core.data.tag.Tag;
+import qapy.pepeethings.ModBlocks;
 
 import static net.minecraft.core.block.tag.BlockTags.TAG_LIST;
 
 public class ModBlockTags {
 	public static final Tag<Block<?>> SICKABLE_BLOCKS = Tag.of("pepeethings:sickable_blocks");
 	public static final Tag<Block<?>> LEAVES = Tag.of("pepeethings:leaves");
+	public static final Tag<Block<?>> CROPS = Tag.of("pepeethings:crops");
 	static {
 		LEAVES.tag(Blocks.LEAVES_OAK);
 		LEAVES.tag(Blocks.LEAVES_OAK_RETRO);
@@ -61,8 +63,17 @@ public class ModBlockTags {
 		SICKABLE_BLOCKS.tag(Blocks.CACTUS);
 		SICKABLE_BLOCKS.tag(Blocks.SUGARCANE);
 		SICKABLE_BLOCKS.tag(Blocks.PUMPKIN);
+		SICKABLE_BLOCKS.tag(ModBlocks.CROPS_POTATO);
+		SICKABLE_BLOCKS.tag(ModBlocks.CROPS_CARROT);
+		SICKABLE_BLOCKS.tag(ModBlocks.CROPS_TOMATO);
+
+		CROPS.tag(ModBlocks.CROPS_POTATO);
+		CROPS.tag(ModBlocks.CROPS_CARROT);
+		CROPS.tag(ModBlocks.CROPS_TOMATO);
+		CROPS.tag(Blocks.CROPS_WHEAT);
 
 		TAG_LIST.add(SICKABLE_BLOCKS);
 		TAG_LIST.add(LEAVES);
+		TAG_LIST.add(CROPS);
 	}
 }

@@ -37,7 +37,7 @@ public class ItemSickle extends ItemTool {
 							boolean isLeaves = block.hasTag(ModBlockTags.LEAVES);
 							if((isLeaves && !targetBlock.hasTag(ModBlockTags.LEAVES)) || (!isLeaves && targetBlock.hasTag(ModBlockTags.LEAVES))) continue;
 							int targetMeta = world.getBlockMetadata(bx, by, bz);
-							if(targetBlock == Blocks.CROPS_WHEAT && targetMeta != 7) continue;
+							if(targetBlock.hasTag(ModBlockTags.CROPS) && targetMeta != 7) continue;
 							if (itemstack.stackSize <= 0) {
 								player.destroyCurrentEquippedItem();
 								return false;
