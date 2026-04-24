@@ -17,7 +17,7 @@ import java.util.Random;
 
 import static qapy.pepeethings.util.MossRegistry.getMossyBlocks;
 
-@Mixin(ItemDye.class)
+@Mixin(value = ItemDye.class, remap = false)
 public class ItemDyeMixin {
 	@Inject(method = "onUseItemOnBlock", at = @At(value = "RETURN", ordinal = 2), cancellable = true)
 	private void handleMossBlocks(ItemStack itemStack, Player player, World world, int blockX, int blockY, int blockZ, Side side, double xPlaced, double yPlaced, CallbackInfoReturnable<Boolean> cir) {

@@ -15,7 +15,7 @@ import java.util.List;
 
 import static qapy.pepeethings.ModBlocks.GLASS_COLORED;
 
-@Mixin(MenuInventoryCreative.class)
+@Mixin(value = MenuInventoryCreative.class, remap = false)
 public abstract class MenuInventoryCreativeMixin extends MenuInventory {
 	@Shadow
 	public static List<ItemStack> creativeItems;
