@@ -1,0 +1,89 @@
+package qapy.pepeethings.item;
+
+import net.minecraft.core.block.Block;
+import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.entity.Mob;
+import net.minecraft.core.entity.player.Player;
+import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.item.material.ToolMaterial;
+import net.minecraft.core.item.tool.ItemTool;
+import net.minecraft.core.util.helper.Side;
+import net.minecraft.core.world.World;
+import net.minecraft.core.world.pos.TilePos;
+import net.minecraft.core.world.pos.TilePosc;
+import org.jetbrains.annotations.NotNull;
+
+import static net.minecraft.core.item.tool.ItemToolPickaxe.miningLevels;
+
+public class ItemToolHammer extends ItemTool {
+	public ItemToolHammer(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
+		super(name, namespaceId, id, 2, toolMaterial, BlockTags.MINEABLE_BY_PICKAXE);
+		this.material = (new ToolMaterial())
+			.setDurability(getMaterial().getDurability())
+			.setEfficiency(toolMaterial.getEfficiency(false) * .8f, toolMaterial.getEfficiency(true) * .8f)
+			.setMiningLevel(getMaterial().getMiningLevel())
+			.setSilkTouch(isSilkTouch());
+	}
+
+	@Override
+	public boolean canHarvestBlock(@NotNull ItemStack itemStack, @NotNull Mob mob, @NotNull Block<?> block) {
+		int miningLevel = miningLevels.getOrDefault(block, -1);
+		if (miningLevel != -1) {
+			return this.material.getMiningLevel() >= miningLevel;
+		} else {
+			return block.hasTag(BlockTags.MINEABLE_BY_PICKAXE);
+		}
+	}
+
+	@Override
+	public boolean onBlockDestroyed(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, @NotNull Block<?> removedBlock, @NotNull TilePosc blockPos, @NotNull Side side) {
+		Player player = (Player) mob;
+			if ((removedBlock.getHardness() > 0.0F || this.isSilkTouch()) && !player.isSneaking()) {
+				itemStack.damageItem(2, player);
+				if (side == Side.NORTH || side == Side.SOUTH) {
+					for (int dx = -1; dx <= 1; dx++) {
+						for (int dy = -1; dy <= 1; dy++) {
+							if (dx == 0 && dy == 0) continue;
+							int targetX = blockPos.x() + dx;
+							int targetY = blockPos.y() + dy;
+							int targetZ = blockPos.z();
+							mine(itemStack, world, mob, player, targetX, targetY, targetZ);
+						}
+					}
+				}
+				if (side == Side.WEST || side == Side.EAST) {
+					for (int dz = -1; dz <= 1; dz++) {
+						for (int dy = -1; dy <= 1; dy++) {
+							if (dz == 0 && dy == 0) continue;
+							int targetZ = blockPos.z() + dz;
+							int targetY = blockPos.y() + dy;
+							int targetX = blockPos.x();
+							mine(itemStack, world, mob, player, targetX, targetY, targetZ);
+						}
+					}
+				}
+				if (side == Side.BOTTOM || side == Side.TOP) {
+					for (int dx = -1; dx <= 1; dx++) {
+						for (int dz = -1; dz <= 1; dz++) {
+							if (dx == 0 && dz == 0) continue;
+							int targetX = blockPos.x() + dx;
+							int targetZ = blockPos.z() + dz;
+							int targetY = blockPos.y();
+							mine(itemStack, world, mob, player, targetX, targetY, targetZ);
+						}
+					}
+				}
+			}
+		return true;
+	}
+
+	private void mine(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, Player player, int targetX, int targetY, int targetZ) {
+		TilePosc targetPos = new TilePos(targetX, targetY, targetZ);
+		Block<?> targetBlock = world.getBlockType(targetPos);
+		if (targetBlock.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemStack, targetBlock)) {
+			if (player.getGamemode().hasItemDrops())
+				targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
+			world.setBlockWithNotify(targetX, targetY, targetZ, 0);
+		}
+	}
+}

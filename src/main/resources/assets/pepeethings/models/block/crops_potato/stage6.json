@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crops_wheat/template",
+  "textures": {
+    "crop": "pepeethings:block/crops_potato/stage6"
+  }
+}

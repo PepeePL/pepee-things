@@ -1,0 +1,8 @@
+{
+  "item.chisel.use": {
+    "subtitle": "subtitles.item.chisel.use",
+    "sounds": [
+      "chisel.ogg"
+    ]
+  }
+}

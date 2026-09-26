@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "qapy.pepeethings.mixin",
+  "compatibilityLevel": "JAVA_${java}",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "CreativeMenuContentsMixin",
+    "ItemDyeMixin",
+    "ItemToolHoeMixin",
+    "MobMixin"
+  ],
+  "client": []
+}

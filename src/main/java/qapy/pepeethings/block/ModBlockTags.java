@@ -1,0 +1,79 @@
+package qapy.pepeethings.block;
+
+import net.minecraft.core.block.Block;
+import net.minecraft.core.block.Blocks;
+import net.minecraft.core.data.tag.Tag;
+import qapy.pepeethings.ModBlocks;
+
+import static net.minecraft.core.block.tag.BlockTags.TAG_LIST;
+
+public class ModBlockTags {
+	public static final Tag<Block<?>> SICKABLE_BLOCKS = Tag.of("pepeethings:sickable_blocks");
+	public static final Tag<Block<?>> LEAVES = Tag.of("pepeethings:leaves");
+	public static final Tag<Block<?>> CROPS = Tag.of("pepeethings:crops");
+	static {
+		LEAVES.tag(Blocks.LEAVES_OAK);
+		LEAVES.tag(Blocks.LEAVES_OAK_RETRO);
+		LEAVES.tag(Blocks.LEAVES_PINE);
+		LEAVES.tag(Blocks.LEAVES_BIRCH);
+		LEAVES.tag(Blocks.LEAVES_CHERRY);
+		LEAVES.tag(Blocks.LEAVES_EUCALYPTUS);
+		LEAVES.tag(Blocks.LEAVES_SHRUB);
+		LEAVES.tag(Blocks.LEAVES_CHERRY_FLOWERING);
+		LEAVES.tag(Blocks.LEAVES_CACAO);
+		LEAVES.tag(Blocks.LEAVES_THORN);
+		LEAVES.tag(Blocks.LEAVES_PALM);
+
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_OAK);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_OAK_RETRO);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_PINE);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_BIRCH);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_CHERRY);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_EUCALYPTUS);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_SHRUB);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_CHERRY_FLOWERING);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_CACAO);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_THORN);
+		SICKABLE_BLOCKS.tag(Blocks.LEAVES_PALM);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_OAK);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_OAK_RETRO);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_PINE);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_BIRCH);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_CHERRY);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_EUCALYPTUS);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_SHRUB);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_CACAO);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_THORN);
+		SICKABLE_BLOCKS.tag(Blocks.SAPLING_PALM);
+		SICKABLE_BLOCKS.tag(Blocks.TALLGRASS);
+		SICKABLE_BLOCKS.tag(Blocks.TALLGRASS_FERN);
+		SICKABLE_BLOCKS.tag(Blocks.DEADBUSH);
+		SICKABLE_BLOCKS.tag(Blocks.SPINIFEX);
+		SICKABLE_BLOCKS.tag(Blocks.ALGAE);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_YELLOW);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_RED);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_PINK);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_PURPLE);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_LIGHT_BLUE);
+		SICKABLE_BLOCKS.tag(Blocks.FLOWER_ORANGE);
+		SICKABLE_BLOCKS.tag(Blocks.MUSHROOM_BROWN);
+		SICKABLE_BLOCKS.tag(Blocks.MUSHROOM_RED);
+		SICKABLE_BLOCKS.tag(Blocks.CROPS_WHEAT);
+		SICKABLE_BLOCKS.tag(Blocks.LAYER_LEAVES_OAK);
+		SICKABLE_BLOCKS.tag(Blocks.CACTUS);
+		SICKABLE_BLOCKS.tag(Blocks.SUGARCANE);
+		SICKABLE_BLOCKS.tag(Blocks.PUMPKIN);
+		SICKABLE_BLOCKS.tag(ModBlocks.CROPS_POTATO);
+		SICKABLE_BLOCKS.tag(ModBlocks.CROPS_CARROT);
+		SICKABLE_BLOCKS.tag(ModBlocks.CROPS_TOMATO);
+
+		CROPS.tag(ModBlocks.CROPS_POTATO);
+		CROPS.tag(ModBlocks.CROPS_CARROT);
+		CROPS.tag(ModBlocks.CROPS_TOMATO);
+		CROPS.tag(Blocks.CROPS_WHEAT);
+
+		TAG_LIST.add(SICKABLE_BLOCKS);
+		TAG_LIST.add(LEAVES);
+		TAG_LIST.add(CROPS);
+	}
+}

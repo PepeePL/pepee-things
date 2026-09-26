@@ -1,0 +1,71 @@
+package qapy.pepeethings;
+
+import net.minecraft.core.block.Blocks;
+import net.minecraft.core.data.registry.Registries;
+import net.minecraft.core.item.ItemStack;
+import net.minecraft.core.item.Items;
+import net.minecraft.core.util.helper.DyeColor;
+import qapy.pepeethings.util.RecipeBuilderDyeing;
+import turniplabs.halplibe.helper.RecipeBuilder;
+import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderFurnace;
+import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShaped;
+import turniplabs.halplibe.helper.recipeBuilders.RecipeBuilderShapeless;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static qapy.pepeethings.PepeeThingsMod.MOD_ID;
+
+public class PepeeThingsRecipes {
+	public static void initNamespaces() {
+		RecipeBuilder.initNameSpace(MOD_ID);
+	}
+
+	public static void onRecipesReady() {
+		registerGroups();
+		RecipeBuilderShaped chiselRecipe = new RecipeBuilderShaped(MOD_ID, "II", "SI" );
+		chiselRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_IRON).create("chisel", ModItems.CHISEL.getDefaultStack());
+		chiselRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("chisel_steel", ModItems.CHISEL_STEEL.getDefaultStack());
+		RecipeBuilderShaped hammerRecipe = new RecipeBuilderShaped(MOD_ID, "II", "IIS", "II" );
+		hammerRecipe.addInput('S', Items.STICK).addInput('I', "minecraft:cobblestones").create("tool_hammer_stone", ModItems.TOOL_HAMMER_STONE.getDefaultStack());
+		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_IRON).create("tool_hammer_iron", ModItems.TOOL_HAMMER_IRON.getDefaultStack());
+		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_GOLD).create("tool_hammer_gold", ModItems.TOOL_HAMMER_GOLD.getDefaultStack());
+		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.DIAMOND).create("tool_hammer_diamond", ModItems.TOOL_HAMMER_DIAMOND.getDefaultStack());
+		hammerRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("tool_hammer_steel", ModItems.TOOL_HAMMER_STEEL.getDefaultStack());
+		RecipeBuilderShaped netRecipe = new RecipeBuilderShaped(MOD_ID, "  W", " SW", "S " );
+		netRecipe.addInput('S', Items.STICK).addInput('W', "minecraft:wools").create("net", ModItems.NET.getDefaultStack());
+		RecipeBuilderDyeing glassDyeing = new RecipeBuilderDyeing(MOD_ID);
+		glassDyeing.setInput("pepeethings:glasses").create("glass_dyeing", ModBlocks.GLASS_COLORED);
+		RecipeBuilderShaped chainRecipe = new RecipeBuilderShaped(MOD_ID, "S", "S");
+		chainRecipe.addInput('S', Items.CHAINLINK).create("chain", new ItemStack(ModItems.CHAIN, 8));
+		RecipeBuilderShaped sickleRecipe = new RecipeBuilderShaped(MOD_ID, " I ", "  I", "SI ");
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', "minecraft:planks").create("tool_sickle_wood", ModItems.TOOL_SICKLE_WOOD.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', "minecraft:cobblestones").create("tool_sickle_stone", ModItems.TOOL_SICKLE_STONE.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_IRON).create("tool_sickle_iron", ModItems.TOOL_SICKLE_IRON.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_GOLD).create("tool_sickle_gold", ModItems.TOOL_SICKLE_GOLD.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.DIAMOND).create("tool_sickle_diamond", ModItems.TOOL_SICKLE_DIAMOND.getDefaultStack());
+		sickleRecipe.addInput('S', Items.STICK).addInput('I', Items.INGOT_STEEL).create("tool_sickle_steel", ModItems.TOOL_SICKLE_STEEL.getDefaultStack());
+		RecipeBuilderFurnace potatoBakedRecipe = new RecipeBuilderFurnace(MOD_ID);
+		potatoBakedRecipe.setInput(ModItems.POTATO).create("potato_baked", ModItems.POTATO_BAKED.getDefaultStack());
+		RecipeBuilderShaped carrotIronRecipe = new RecipeBuilderShaped(MOD_ID, "III", "ICI", "III");
+		carrotIronRecipe.addInput('C', ModItems.CARROT).addInput('I', Items.INGOT_IRON).create("carrot_iron", ModItems.CARROT_IRON.getDefaultStack());
+		RecipeBuilderShapeless sandwichMeatRecipe = new RecipeBuilderShapeless(MOD_ID);
+		RecipeBuilderShapeless sandwichTomatoRecipe = new RecipeBuilderShapeless(MOD_ID);
+		sandwichMeatRecipe.addInput(Items.FOOD_BREAD).addInput(Items.FOOD_PORKCHOP_COOKED).create("sandwich_meat", ModItems.SANDWICH_MEAT.getDefaultStack());
+		sandwichTomatoRecipe.addInput(Items.FOOD_BREAD).addInput(ModItems.TOMATO).create("sandwich_tomato", ModItems.SANDWICH_TOMATO.getDefaultStack());
+		RecipeBuilderShapeless stewMeatRecipe = new RecipeBuilderShapeless(MOD_ID);
+		stewMeatRecipe.addInput(Items.BOWL).addInput(Items.FOOD_PORKCHOP_COOKED).addInput(ModItems.CARROT).addInput(ModItems.POTATO).create("stew_meat", ModItems.STEW_MEAT.getDefaultStack());
+		RecipeBuilderShapeless soupTomatoRecipe = new RecipeBuilderShapeless(MOD_ID);
+		soupTomatoRecipe.addInput(Items.BOWL).addInput(ModItems.TOMATO).addInput(ModItems.TOMATO).create("soup_tomato", ModItems.SOUP_TOMATO.getDefaultStack());
+	}
+
+	private static void registerGroups(){
+		List<ItemStack> glassStackList = new ArrayList<>();
+		glassStackList.add(Blocks.GLASS.getDefaultStack());
+		for (DyeColor color : DyeColor.values()) {
+			glassStackList.add(new ItemStack(ModBlocks.GLASS_COLORED, 1, color.blockMeta));
+		}
+		Registries.ITEM_GROUPS.register("pepeethings:glasses", glassStackList);
+	}
+
+}

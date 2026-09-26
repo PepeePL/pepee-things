@@ -1,38 +1,31 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "pepeethings",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This mod aims to help new BTA modders.",
+	"name": "Pepee's Things",
+	"description": "Random things I came up with.",
 	"authors": [
-		"Turnip Labs"
+		"Pepee"
 	],
 	"contact": {
 		"homepage": "",
 		"sources": ""
 	},
 	"icon": "icon.png",
-	"license": "CC0-1.0",
+	"license": "GPL-2.0",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"turniplabs.examplemod.ExampleMod"
+			"qapy.pepeethings.PepeeThingsMod"
 		],
-		"beforeGameStart": [
-			"turniplabs.examplemod.ExampleMod"
-		],
-		"afterGameStart": [
-			"turniplabs.examplemod.ExampleMod"
-		],
-		"recipesReady": [
-			"turniplabs.examplemod.ExampleMod"
-		]
+		"client": ["qapy.pepeethings.PepeeThingsClient"]
 	},
 	"mixins": [
-		"examplemod.mixins.json"
+		"pepeethings.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=${fabricloader}",
+		"halplibe": ">=${halplibe}",
 		"minecraft": "*",
 		"java": ">=${java}"
 	},
