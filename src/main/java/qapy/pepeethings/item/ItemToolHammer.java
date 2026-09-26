@@ -1,6 +1,7 @@
 package qapy.pepeethings.item;
 
 import net.minecraft.core.block.Block;
+import net.minecraft.core.block.Blocks;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.entity.Mob;
 import net.minecraft.core.entity.player.Player;
@@ -80,10 +81,10 @@ public class ItemToolHammer extends ItemTool {
 	private void mine(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, Player player, int targetX, int targetY, int targetZ) {
 		TilePosc targetPos = new TilePos(targetX, targetY, targetZ);
 		Block<?> targetBlock = world.getBlockType(targetPos);
-		if (targetBlock.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(mob, itemStack, targetBlock)) {
+		if (targetBlock.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(itemStack, mob, targetBlock)) {
 			if (player.getGamemode().hasItemDrops())
-				targetBlock.harvestBlock(world, player, targetX, targetY, targetZ, 0, null);
-			world.setBlockWithNotify(targetX, targetY, targetZ, 0);
+				targetBlock.onHarvest(world, player, targetPos, 0, null);
+			world.setBlockTypeNotify(targetPos, Blocks.AIR);
 		}
 	}
 }

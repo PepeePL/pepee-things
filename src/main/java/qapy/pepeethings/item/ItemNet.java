@@ -47,7 +47,7 @@ public class ItemNet extends Item {
 	}
 
 	@Override
-	public String getLanguageKey(ItemStack itemstack) {
+	public @NotNull String getLanguageKey(ItemStack itemstack) {
 		return itemstack.getMetadata() == 1 ? "item.pepeethings.net_full" : "item.pepeethings.net";
 	}
 }

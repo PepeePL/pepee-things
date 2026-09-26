@@ -23,7 +23,6 @@ public class ItemDyeMixin {
 	@Inject(method = "onUseOnBlock", at = @At(value = "RETURN", ordinal = 2), cancellable = true)
 	private void handleMossBlocks(ItemStack itemStack, World world, Player player, TilePosc blockPos, Side side, double xPlaced, double yPlaced, CallbackInfoReturnable<Boolean> cir) {
 		Block<?> block = world.getBlockType(blockPos);
-		if (block == null) return;
 		if (getMossyBlocks().contains(block.id())) {
 			if (!world.isClientSide) {
 				int randomInt = new Random().nextInt(3) + 1;

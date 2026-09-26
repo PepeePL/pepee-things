@@ -4,7 +4,6 @@ import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogicTransparent;
 import net.minecraft.core.block.IPainted;
 import net.minecraft.core.block.entity.TileEntity;
-import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.material.Materials;
 import net.minecraft.core.entity.player.Player;
 import net.minecraft.core.enums.EnumDropCause;
@@ -23,7 +22,7 @@ public class BlockLogicGlassColored extends BlockLogicTransparent implements IPa
 	}
 
 	@Override
-	public ItemStack[] getBreakResult(World world, EnumDropCause dropCause, int meta, TileEntity tileEntity) {
+	public ItemStack[] getBreakResult(@NotNull World world, @NotNull EnumDropCause dropCause, int meta, TileEntity tileEntity) {
 		switch (dropCause) {
 			case PICK_BLOCK:
 			case SILK_TOUCH:
@@ -33,16 +32,12 @@ public class BlockLogicGlassColored extends BlockLogicTransparent implements IPa
 		}
 	}
 
-	@Override
-	public int getPlacedBlockMetadata(@Nullable Player player, ItemStack stack, World world, int x, int y, int z, Side side, double xPlaced, double yPlaced) {
-		return stack.getMetadata() & 15;
-	}
 	public int getPlacedData(@Nullable Player player, @NotNull ItemStack itemStack, @NotNull World world, @NotNull TilePosc tilePos, @NotNull Side side, double xHit, double yHit) {
 		return itemStack.getMetadata();
 	}
 
 	@Override
-	public DyeColor fromMetadata(int meta) {
+	public @NotNull DyeColor fromMetadata(int meta) {
 		return DyeColor.colorFromBlockMeta(meta);
 	}
 

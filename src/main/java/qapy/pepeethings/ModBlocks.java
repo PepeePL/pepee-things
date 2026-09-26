@@ -2,7 +2,6 @@ package qapy.pepeethings;
 
 
 import net.minecraft.core.block.Block;
-import net.minecraft.core.block.material.Material;
 import net.minecraft.core.block.material.Materials;
 import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.Items;
@@ -13,8 +12,6 @@ import qapy.pepeethings.block.BlockLogicCrate;
 import qapy.pepeethings.block.BlockLogicCrops;
 import qapy.pepeethings.block.BlockLogicGlassColored;
 import turniplabs.halplibe.helper.BlockBuilder;
-import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryCategory;
-import turniplabs.halplibe.helper.creativeInventory.CreativeInventoryPlacement;
 
 import static qapy.pepeethings.ModConfig.blockID;
 import static qapy.pepeethings.PepeeThingsMod.MOD_ID;

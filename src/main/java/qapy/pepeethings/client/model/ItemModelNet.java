@@ -15,7 +15,7 @@ import org.jetbrains.annotations.Nullable;
 public class ItemModelNet extends ItemModelStandard {
 	public static IconCoordinate[] netVariants = new IconCoordinate[2];
 	public ItemModelNet(Item item) {
-		super(item, null);
+		super(item);
 	}
 	public @NotNull IconCoordinate getIcon(@Nullable Entity entity, ItemStack itemStack) {
 		int meta = itemStack.getMetadata();
