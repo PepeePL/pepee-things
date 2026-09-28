@@ -11,10 +11,11 @@ import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.item.material.ToolMaterial;
 import net.minecraft.core.item.tool.ItemTool;
 import net.minecraft.core.util.helper.Side;
-import net.minecraft.core.util.phys.AABB;
 import net.minecraft.core.world.World;
+import net.minecraft.core.world.pos.TilePos;
 import net.minecraft.core.world.pos.TilePosc;
 import org.jetbrains.annotations.NotNull;
+import org.joml.primitives.AABBd;
 import qapy.pepeethings.block.ModBlockTags;
 
 public class ItemSickle extends ItemTool {
@@ -31,16 +32,16 @@ public class ItemSickle extends ItemTool {
 			int x = blockPos.x();
 			int y = blockPos.y();
 			int z = blockPos.z();
-			AABB area = AABB.getPermanentBB(x - radius, y - 1, z - radius, x + radius, y + 1, z + radius);
+			AABBd area = new AABBd(x - radius, y - 1, z - radius, x + radius, y + 1, z + radius);
 			for (int bx = (int) area.minX; bx <= (int) area.maxX; bx++) {
 				for (int by = (int) area.minY; by <= (int) area.maxY; by++) {
 					for (int bz = (int) area.minZ; bz <= (int) area.maxZ; bz++) {
-						int targetBlockID = world.getBlockId(bx, by, bz);
-						Block<?> targetBlock = Blocks.blocksList[targetBlockID];
-						if (targetBlock != null && targetBlock.hasTag(ModBlockTags.SICKABLE_BLOCKS)) {
+						TilePosc targetPos = new TilePos(bx, by, bz);
+						Block<?> targetBlock = world.getBlockType(targetPos);
+						if (targetBlock.hasTag(ModBlockTags.SICKABLE_BLOCKS)) {
 							boolean isLeaves = removedBlock.hasTag(ModBlockTags.LEAVES);
 							if((isLeaves && !targetBlock.hasTag(ModBlockTags.LEAVES)) || (!isLeaves && targetBlock.hasTag(ModBlockTags.LEAVES))) continue;
-							int targetMeta = world.getBlockMetadata(bx, by, bz);
+							int targetMeta = world.getBlockData(targetPos);
 							if(targetBlock.hasTag(ModBlockTags.CROPS) && targetMeta != 7) continue;
 							if (itemStack.stackSize <= 0) {
 								player.destroyCurrentEquippedItem();
@@ -49,12 +50,12 @@ public class ItemSickle extends ItemTool {
 							itemStack.damageItem(3, player);
 							if (player.getGamemode().hasItemDrops()){
 								if((Block.hasLogicClass(targetBlock, BlockLogicFlowerStackable.class)) && targetMeta > 0){
-									targetBlock.dropBlockWithCause(world, EnumDropCause.PROPER_TOOL, bx, by, bz, targetMeta, null, player);
+									targetBlock.dropWithCause(world, EnumDropCause.PROPER_TOOL, targetPos, targetMeta, null, player);
 								}else{
-									targetBlock.harvestBlock(world, player, bx, by, bz, targetMeta, null);
+									targetBlock.onHarvest(world, player, targetPos, targetMeta, null);
 								}
 							}
-							world.setBlockWithNotify(bx, by, bz, 0);
+							world.setBlockTypeNotify(targetPos, Blocks.AIR);
 						}
 					}
 				}

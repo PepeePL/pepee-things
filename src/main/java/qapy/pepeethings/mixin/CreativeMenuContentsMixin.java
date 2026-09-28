@@ -15,7 +15,7 @@ import qapy.pepeethings.ModBlocks;
 
 import java.util.List;
 
-@Mixin(value = CreativeMenuContents.class, remap = false)
+@Mixin(value = CreativeMenuContents.class)
 public abstract class CreativeMenuContentsMixin{
 
 	@Shadow

@@ -21,21 +21,21 @@ public class PepeeThingsMod implements ModInitializer{
 		CommonEvents.AFTER_GAME_START.listen(Key.of(MOD_ID), this::afterGameStart);
 		CommonEvents.RECIPES_NAMESPACE_INIT.listen(Key.of(MOD_ID), PepeeThingsRecipes::initNamespaces);
 		CommonEvents.RECIPES_READY.listen(Key.of(MOD_ID), PepeeThingsRecipes::onRecipesReady);
-		LOGGER.info("Pepee Things initialized.");
 		ModConfig.setup();
+		LOGGER.info("Pepee Things initialized.");
 	}
 
 	public void beforeGameStart() {
-		SoundTypes.loadSoundsJson(MOD_ID);
 		new ModBlocks().initBlocks();
 		new ModItems().initItems();
 		new ModEntities().initEntities();
+		SoundTypes.loadSoundsJson(MOD_ID);
+
 	}
 
 	public void afterGameStart() {
 		new ModBlockTags();
 		new ModItemTags();
-		SoundRepository.namespaceAdded(MOD_ID);
 	}
 
 //	public void beforeClientStart() {

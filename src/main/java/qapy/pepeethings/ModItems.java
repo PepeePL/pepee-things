@@ -90,6 +90,7 @@ public class ModItems {
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
 			.build(new ItemSickle("tool.sickle.steel", "pepeethings:item/tool_sickle_steel", itemID(), 2, ToolMaterial.steel));
 		CHAIN = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.PLACEABLES))
 			.build(new ItemRope("chain", "pepeethings:item/chain", itemID(), (Block<BlockLogicRope>) ModBlocks.CHAIN));
 		SEEDS_CARROT = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORGANIC))
