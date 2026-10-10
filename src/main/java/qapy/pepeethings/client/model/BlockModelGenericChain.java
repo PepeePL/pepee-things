@@ -1,5 +1,7 @@
 package qapy.pepeethings.client.model;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
 import net.minecraft.client.render.block.model.generic.BlockModelGeneric;
 import net.minecraft.client.render.tessellator.TessellatorGeneral;
@@ -17,6 +19,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.useless.dragonfly.models.block.StaticBlockModel;
 
+@Environment(EnvType.CLIENT)
 public class BlockModelGenericChain<T extends BlockLogic> extends BlockModelGeneric<T> {
 	public final @NotNull StaticBlockModel line = BlockModelDispatcher.loadDataModel("pepeethings:block/chain/line").asModel();
 	public final @NotNull StaticBlockModel knot = BlockModelDispatcher.loadDataModel("pepeethings:block/chain/knot").asModel();

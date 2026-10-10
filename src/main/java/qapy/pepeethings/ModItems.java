@@ -55,19 +55,19 @@ public class ModItems {
 			.build(new ItemMoss("moss", "pepeethings:item/moss", itemID()));
 		TOOL_HAMMER_STONE = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
-			.build(new ItemToolHammer("tool.hammer.stone", "pepeethings:item/tool_hammer_stone", itemID(), ToolMaterial.stone));
+			.build(new ItemToolHammer("tool.hammer.stone", "pepeethings:item/tool_hammer_stone", itemID(), ItemToolHammer.Tool.PICKAXE, ToolMaterial.stone, BlockTags.MINEABLE_BY_PICKAXE));
 		TOOL_HAMMER_IRON = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
-			.build(new ItemToolHammer("tool.hammer.iron", "pepeethings:item/tool_hammer_iron", itemID(), ToolMaterial.iron));
+			.build(new ItemToolHammer("tool.hammer.iron", "pepeethings:item/tool_hammer_iron", itemID(), ItemToolHammer.Tool.PICKAXE, ToolMaterial.iron, BlockTags.MINEABLE_BY_PICKAXE));
 		TOOL_HAMMER_GOLD = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
-			.build(new ItemToolHammer("tool.hammer.gold", "pepeethings:item/tool_hammer_gold", itemID(), ToolMaterial.gold));
+			.build(new ItemToolHammer("tool.hammer.gold", "pepeethings:item/tool_hammer_gold", itemID(), ItemToolHammer.Tool.PICKAXE, ToolMaterial.gold, BlockTags.MINEABLE_BY_PICKAXE));
 		TOOL_HAMMER_DIAMOND = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
-			.build(new ItemToolHammer("tool.hammer.diamond", "pepeethings:item/tool_hammer_diamond", itemID(), ToolMaterial.diamond));
+			.build(new ItemToolHammer("tool.hammer.diamond", "pepeethings:item/tool_hammer_diamond", itemID(), ItemToolHammer.Tool.PICKAXE, ToolMaterial.diamond, BlockTags.MINEABLE_BY_PICKAXE));
 		TOOL_HAMMER_STEEL = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
-			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID(), ToolMaterial.steel));
+			.build(new ItemToolHammer("tool.hammer.steel", "pepeethings:item/tool_hammer_steel", itemID(), ItemToolHammer.Tool.PICKAXE, ToolMaterial.steel, BlockTags.MINEABLE_BY_PICKAXE));
 		NET = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISC_TOOLS))
 			.build(new ItemNet("net", "pepeethings:item/net", itemID()));

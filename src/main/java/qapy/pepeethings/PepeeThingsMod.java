@@ -1,7 +1,6 @@
 package qapy.pepeethings;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.client.sound.SoundRepository;
 import net.minecraft.core.sound.SoundTypes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,11 +36,4 @@ public class PepeeThingsMod implements ModInitializer{
 		new ModBlockTags();
 		new ModItemTags();
 	}
-
-//	public void beforeClientStart() {
-//		SoundRepository.namespaceAdded(MOD_ID);
-//	}
-//
-//	public void afterClientStart() {
-//	}
 }

@@ -1,11 +1,14 @@
 package qapy.pepeethings.item;
 
+import net.minecraft.core.block.Block;
 import net.minecraft.core.entity.player.Player;
 import net.minecraft.core.item.Item;
 import net.minecraft.core.item.ItemStack;
 import net.minecraft.core.util.helper.Side;
 import net.minecraft.core.world.World;
 import net.minecraft.core.world.pos.TilePosc;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import qapy.pepeethings.util.MossRegistry;
 
 public class ItemMoss extends Item {
@@ -14,16 +17,16 @@ public class ItemMoss extends Item {
 	}
 
 	@Override
-	public boolean onUseOnBlock(ItemStack itemstack, World world, Player player, TilePosc posc, Side side, double xPlaced, double yPlaced) {
-		return useMoss(itemstack, player, world, posc.x(), posc.y(), posc.z());
+	public boolean onUseOnBlock(@NotNull ItemStack selfStack, @NotNull World world, @Nullable Player player, @NotNull TilePosc blockPos, @NotNull Side side, double xHit, double yHit) {
+		return useMoss(selfStack, player, world, blockPos);
 	}
 
-	public boolean useMoss(ItemStack itemstack, Player player, World world, int blockX, int blockY, int blockZ) {
-		int blockID = world.getBlockId(blockX, blockY, blockZ);
+	public boolean useMoss(ItemStack itemstack, Player player, World world, TilePosc blockPos) {
+		Block<?> block = world.getBlockType(blockPos);
 		if(!world.isClientSide){
-			Integer mossyBlockID = MossRegistry.getMossyVariant(blockID);
-			if(mossyBlockID != null){
-				world.setBlockWithNotify(blockX, blockY, blockZ, mossyBlockID);
+			Block<?> mossyBlock = MossRegistry.getMossyVariant(block);
+			if(mossyBlock != null){
+				world.setBlockTypeNotify(blockPos, mossyBlock);
 				if (player == null || player.getGamemode().hasBlockConsumption()) {
 					--itemstack.stackSize;
 				}

@@ -1,6 +1,8 @@
 package qapy.pepeethings.util;
 
+import net.minecraft.core.block.Block;
 import net.minecraft.core.block.Blocks;
+import qapy.pepeethings.ModBlocks;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -8,20 +10,25 @@ import java.util.List;
 import java.util.Map;
 
 public class MossRegistry {
-	private static final Map<Integer, Integer> MOSSY_MAP = new HashMap<>();
+	private static final Map<Block<?>, Block<?>> MOSSY_MAP = new HashMap<>();
 	static {
-		MOSSY_MAP.put(Blocks.STONE.id(), Blocks.MOSS_STONE.id());
-		MOSSY_MAP.put(Blocks.COBBLE_STONE.id(), Blocks.COBBLE_STONE_MOSSY.id());
-		MOSSY_MAP.put(Blocks.BASALT.id(), Blocks.MOSS_BASALT.id());
-		MOSSY_MAP.put(Blocks.GRANITE.id(), Blocks.MOSS_GRANITE.id());
-		MOSSY_MAP.put(Blocks.LIMESTONE.id(), Blocks.MOSS_LIMESTONE.id());
-		MOSSY_MAP.put(Blocks.BRICK_STONE_POLISHED.id(), Blocks.BRICK_STONE_POLISHED_MOSSY.id());
-		MOSSY_MAP.put(Blocks.LOG_OAK.id(), Blocks.LOG_OAK_MOSSY.id());
+		MOSSY_MAP.put(Blocks.STONE, Blocks.MOSS_STONE);
+		MOSSY_MAP.put(Blocks.COBBLE_STONE, Blocks.COBBLE_STONE_MOSSY);
+		MOSSY_MAP.put(Blocks.BASALT, Blocks.MOSS_BASALT);
+		MOSSY_MAP.put(Blocks.GRANITE, Blocks.MOSS_GRANITE);
+		MOSSY_MAP.put(Blocks.LIMESTONE, Blocks.MOSS_LIMESTONE);
+		MOSSY_MAP.put(Blocks.BRICK_STONE_POLISHED, Blocks.BRICK_STONE_POLISHED_MOSSY);
+		MOSSY_MAP.put(Blocks.LOG_OAK, Blocks.LOG_OAK_MOSSY);
+		MOSSY_MAP.put(Blocks.BRICK_CLAY, ModBlocks.BRICK_CLAY_MOSSY);
+		MOSSY_MAP.put(ModBlocks.BRICK_CLAY_BLACK, ModBlocks.BRICK_CLAY_BLACK_MOSSY);
+		MOSSY_MAP.put(ModBlocks.BRICK_CLAY_BLUE, ModBlocks.BRICK_CLAY_BLUE_MOSSY);
+		MOSSY_MAP.put(ModBlocks.BRICK_CLAY_RED, ModBlocks.BRICK_CLAY_RED_MOSSY);
+		MOSSY_MAP.put(ModBlocks.BRICK_CLAY_WHITE, ModBlocks.BRICK_CLAY_WHITE_MOSSY);
 	}
-	public static Integer getMossyVariant(int blockID){
-		return MOSSY_MAP.get(blockID);
+	public static Block<?> getMossyVariant(Block<?> block){
+		return MOSSY_MAP.get(block);
 	}
-	public static List<Integer> getMossyBlocks(){
+	public static List<Block<?>> getMossyBlocks(){
 		return new ArrayList<>(MOSSY_MAP.values());
 	}
 }

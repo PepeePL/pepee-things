@@ -3,6 +3,7 @@ package qapy.pepeethings.item;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.Blocks;
 import net.minecraft.core.block.tag.BlockTags;
+import net.minecraft.core.data.tag.Tag;
 import net.minecraft.core.entity.Mob;
 import net.minecraft.core.entity.player.Player;
 import net.minecraft.core.item.ItemStack;
@@ -17,11 +18,13 @@ import org.jetbrains.annotations.NotNull;
 import static net.minecraft.core.item.tool.ItemToolPickaxe.miningLevels;
 
 public class ItemToolHammer extends ItemTool {
-	public ItemToolHammer(String name, String namespaceId, int id, ToolMaterial toolMaterial) {
-		super(name, namespaceId, id, 2, toolMaterial, BlockTags.MINEABLE_BY_PICKAXE);
+	public final Tool tool;
+	public ItemToolHammer(String name, String namespaceId, int id, Tool tool, ToolMaterial toolMaterial, Tag<Block<?>> tagEffectiveAgainst) {
+		super(name, namespaceId, id, 2, toolMaterial, tagEffectiveAgainst);
+		this.tool = tool;
 		this.material = (new ToolMaterial())
 			.setDurability(getMaterial().getDurability())
-			.setEfficiency(toolMaterial.getEfficiency(false) * .8f, toolMaterial.getEfficiency(true) * .8f)
+			.setEfficiency(toolMaterial.getEfficiency(false) * .2f, toolMaterial.getEfficiency(true) * .2f)
 			.setMiningLevel(getMaterial().getMiningLevel())
 			.setSilkTouch(isSilkTouch());
 	}
@@ -32,6 +35,9 @@ public class ItemToolHammer extends ItemTool {
 		if (miningLevel != -1) {
 			return this.material.getMiningLevel() >= miningLevel;
 		} else {
+			if (this.tool == Tool.SHOVEL) {
+				return block.hasTag(BlockTags.MINEABLE_BY_SHOVEL);
+			}
 			return block.hasTag(BlockTags.MINEABLE_BY_PICKAXE);
 		}
 	}
@@ -40,7 +46,7 @@ public class ItemToolHammer extends ItemTool {
 	public boolean onBlockDestroyed(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, @NotNull Block<?> removedBlock, @NotNull TilePosc blockPos, @NotNull Side side) {
 		Player player = (Player) mob;
 			if ((removedBlock.getHardness() > 0.0F || this.isSilkTouch()) && !player.isSneaking()) {
-				itemStack.damageItem(2, player);
+				itemStack.damageItem(4, player);
 				if (side == Side.NORTH || side == Side.SOUTH) {
 					for (int dx = -1; dx <= 1; dx++) {
 						for (int dy = -1; dy <= 1; dy++) {
@@ -81,10 +87,13 @@ public class ItemToolHammer extends ItemTool {
 	private void mine(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, Player player, int targetX, int targetY, int targetZ) {
 		TilePosc targetPos = new TilePos(targetX, targetY, targetZ);
 		Block<?> targetBlock = world.getBlockType(targetPos);
-		if (targetBlock.hasTag(BlockTags.MINEABLE_BY_PICKAXE) && canHarvestBlock(itemStack, mob, targetBlock)) {
+		if (canHarvestBlock(itemStack, mob, targetBlock)) {
 			if (player.getGamemode().hasItemDrops())
 				targetBlock.onHarvest(world, player, targetPos, 0, null);
 			world.setBlockTypeNotify(targetPos, Blocks.AIR);
 		}
+	}
+	public enum Tool{
+		SHOVEL, PICKAXE
 	}
 }
