@@ -99,11 +99,13 @@ public class ModBlocks {
 			.withSound(BlockSounds.GRAVEL)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL, BlockTags.GROWS_FLOWERS);
 		BLOCK_CLAY_BLUE = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("block.clay.blue", "block_clay_blue", blockID(), (b -> new BlockLogicClayBase(b, ModItems.CLAY_BLUE)))
 			.withHardness(0.6F)
 			.withSound(BlockSounds.GRAVEL)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		BLOCK_CLAY_RED = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("block.clay.red", "block_clay_red", blockID(), (b -> new BlockLogicClayBase(b, ModItems.CLAY_RED)))
 			.withHardness(0.6F)
 			.withSound(BlockSounds.GRAVEL)
