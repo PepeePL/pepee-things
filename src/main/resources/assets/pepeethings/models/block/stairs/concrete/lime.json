@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "pepeethings:block/concrete/lime",
+    "top": "pepeethings:block/concrete/lime",
+    "side": "pepeethings:block/concrete/lime"
+  }
+}

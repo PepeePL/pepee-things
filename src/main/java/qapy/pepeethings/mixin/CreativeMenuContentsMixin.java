@@ -27,5 +27,9 @@ public abstract class CreativeMenuContentsMixin{
 	@Inject(method = "addPainted", at = @At("TAIL"))
 	private static void addPainted(@NotNull List<ItemStack> list, DyeColor color, CallbackInfo ci){
 		list.add(new ItemStack(ModBlocks.GLASS_COLORED, 1, painted(ModBlocks.GLASS_COLORED).toMetadata(color)));
+		list.add(new ItemStack(ModBlocks.CONCRETE_POWDER, 1, painted(ModBlocks.CONCRETE_POWDER).toMetadata(color)));
+		list.add(new ItemStack(ModBlocks.CONCRETE, 1, painted(ModBlocks.CONCRETE).toMetadata(color)));
+		list.add(new ItemStack(ModBlocks.SLAB_CONCRETE, 1, painted(ModBlocks.SLAB_CONCRETE).toMetadata(color)));
+		list.add(new ItemStack(ModBlocks.STAIRS_CONCRETE, 1, painted(ModBlocks.STAIRS_CONCRETE).toMetadata(color)));
 	}
 }

@@ -1,0 +1,50 @@
+[
+  {
+    "name": "pepeethings:furnace/clay_black_to_brick",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:item/clay_black"
+      }
+    },
+    "output": {
+      "id": "pepeethings:item/brick_clay_black"
+    }
+  },
+  {
+    "name": "pepeethings:furnace/clay_blue_to_brick",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:item/clay_blue"
+      }
+    },
+    "output": {
+      "id": "pepeethings:item/brick_clay_blue"
+    }
+  },
+  {
+    "name": "pepeethings:furnace/clay_red_to_brick",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:item/clay_red"
+      }
+    },
+    "output": {
+      "id": "pepeethings:item/brick_clay_red"
+    }
+  },
+  {
+    "name": "pepeethings:furnace/clay_white_to_brick",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:item/clay_white"
+      }
+    },
+    "output": {
+      "id": "pepeethings:item/brick_clay_white"
+    }
+  }
+]

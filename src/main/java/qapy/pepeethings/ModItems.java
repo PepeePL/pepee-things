@@ -2,6 +2,7 @@ package qapy.pepeethings;
 
 import net.minecraft.core.block.Block;
 import net.minecraft.core.block.BlockLogicRope;
+import net.minecraft.core.block.tag.BlockTags;
 import net.minecraft.core.item.*;
 import net.minecraft.core.item.material.ToolMaterial;
 import qapy.pepeethings.item.*;
@@ -42,6 +43,20 @@ public class ModItems {
 	public static Item SOUP_TOMATO;
 	public static Item CARROT_IRON;
 	public static Item CRATE;
+	public static Item CLAY_BLACK;
+	public static Item BRICK_CLAY_BLACK;
+	public static Item CLAY_BLUE;
+	public static Item BRICK_CLAY_BLUE;
+	public static Item CLAY_RED;
+	public static Item BRICK_CLAY_RED;
+	public static Item CLAY_WHITE;
+	public static Item BRICK_CLAY_WHITE;
+	public static Item TOOL_SPADE_STONE;
+	public static Item TOOL_SPADE_IRON;
+	public static Item TOOL_SPADE_GOLD;
+	public static Item TOOL_SPADE_DIAMOND;
+	public static Item TOOL_SPADE_STEEL;
+	public static Item MORTAR;
 
 	public void initItems(){
 		CHISEL = new ItemBuilder(MOD_ID)
@@ -130,5 +145,47 @@ public class ModItems {
 			.build(new ItemFood("carrot.iron", "pepeethings:item/carrot_iron", itemID(), 7, 0, false, 2));
 		CRATE = new ItemBuilder(MOD_ID)
 			.build(new ItemPlaceable("crate", "pepeethings:item/crate", itemID(), ModBlocks.CRATE));
+		CLAY_BLACK = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("clay.black", "pepeethings:item/clay_black", itemID()));
+		BRICK_CLAY_BLACK = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("brick.clay.black", "pepeethings:item/brick_clay_black", itemID()));
+		CLAY_BLUE = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("clay.blue", "pepeethings:item/clay_blue", itemID()));
+		BRICK_CLAY_BLUE = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("brick.clay.blue", "pepeethings:item/brick_clay_blue", itemID()));
+		CLAY_RED = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("clay.red", "pepeethings:item/clay_red", itemID()));
+		BRICK_CLAY_RED = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("brick.clay.red", "pepeethings:item/brick_clay_red", itemID()));
+		CLAY_WHITE = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("clay.white", "pepeethings:item/clay_white", itemID()));
+		BRICK_CLAY_WHITE = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build(new Item("brick.clay.white", "pepeethings:item/brick_clay_white", itemID()));
+		TOOL_SPADE_STONE = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
+			.build(new ItemToolHammer("tool.spade.stone", "pepeethings:item/tool_spade_stone", itemID(), ItemToolHammer.Tool.SHOVEL, ToolMaterial.stone, BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_IRON = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
+			.build(new ItemToolHammer("tool.spade.iron", "pepeethings:item/tool_spade_iron", itemID(), ItemToolHammer.Tool.SHOVEL, ToolMaterial.iron, BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_GOLD = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
+			.build(new ItemToolHammer("tool.spade.gold", "pepeethings:item/tool_spade_gold", itemID(), ItemToolHammer.Tool.SHOVEL, ToolMaterial.gold, BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_DIAMOND = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
+			.build(new ItemToolHammer("tool.spade.diamond", "pepeethings:item/tool_spade_diamond", itemID(), ItemToolHammer.Tool.SHOVEL, ToolMaterial.diamond, BlockTags.MINEABLE_BY_SHOVEL));
+		TOOL_SPADE_STEEL = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
+			.build(new ItemToolHammer("tool.spade.steel", "pepeethings:item/tool_spade_steel", itemID(), ItemToolHammer.Tool.SHOVEL, ToolMaterial.steel, BlockTags.MINEABLE_BY_SHOVEL));
+		MORTAR = new ItemBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
+			.build(new ItemMortar("mortar", "pepeethings:item/mortar", itemID()));
 	}
 }

@@ -6,10 +6,18 @@
     "defaultRequire": 1
   },
   "mixins": [
+    "BlockLogicGravelMixin",
+    "BlocksMixin",
     "CreativeMenuContentsMixin",
     "ItemDyeMixin",
     "ItemToolHoeMixin",
-    "MobMixin"
+    "MobMixin",
+    "decorate.BlackClayOverworldMixin",
+    "decorate.BlueClayOverworldMixin",
+    "decorate.RedClayNetherMixin",
+    "decorate.WhiteClayOverworldMixin"
   ],
-  "client": []
+  "client": [
+    "RecipePageCraftingMixin"
+  ]
 }

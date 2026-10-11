@@ -2,8 +2,12 @@ package qapy.pepeethings;
 
 import net.minecraft.client.render.EntityRendererDispatcher;
 import net.minecraft.client.render.TileEntityRenderDispatcher;
+import net.minecraft.client.render.block.color.BlockColorCustom;
 import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
+import net.minecraft.client.render.block.model.BlockModelStandard;
+import net.minecraft.client.render.block.model.generic.BlockModelGeneric;
+import net.minecraft.client.render.colorizer.Colorizers;
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelStandard;
 import qapy.pepeethings.client.model.*;
@@ -19,6 +23,33 @@ public class PepeeThingsModels {
 		dispatcher.addDispatch(new BlockModelGenericCrops<>(ModBlocks.CROPS_POTATO, "crops_potato"));
 		dispatcher.addDispatch(new BlockModelGenericCrops<>(ModBlocks.CROPS_TOMATO, "crops_tomato"));
 		dispatcher.addDispatch(new BlockModelGenericChain<>(ModBlocks.CHAIN));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BLOCK_CLAY_WHITE).setAllTextures("pepeethings:block/block_clay_white"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BLOCK_CLAY_BLACK).setAllTextures("pepeethings:block/block_clay_black"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BLOCK_CLAY_BLUE).setAllTextures("pepeethings:block/block_clay_blue"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BLOCK_CLAY_RED).setAllTextures("pepeethings:block/block_clay_red"));
+		dispatcher.addDispatch(new BlockModelGeneric<>(ModBlocks.BLOCK_CLAY_BLACK_GRASSY, loadDataModel("pepeethings:block/clay_black_grassy").asModel()));
+		dispatcher.addDispatch(new BlockModelGeneric<>(ModBlocks.FLOWER_HIBISCUS, loadDataModel("pepeethings:block/flower_hibiscus").asModel()).render3D(false));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_BLACK).setAllTextures("pepeethings:block/brick_clay_black"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_BLUE).setAllTextures("pepeethings:block/brick_clay_blue"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_RED).setAllTextures("pepeethings:block/brick_clay_red"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_WHITE).setAllTextures("pepeethings:block/brick_clay_white"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_MOSSY).setAllTextures("pepeethings:block/brick_clay_mossy"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_BLACK_MOSSY).setAllTextures("pepeethings:block/brick_clay_black_mossy"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_BLUE_MOSSY).setAllTextures("pepeethings:block/brick_clay_blue_mossy"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_RED_MOSSY).setAllTextures("pepeethings:block/brick_clay_red_mossy"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_CLAY_WHITE_MOSSY).setAllTextures("pepeethings:block/brick_clay_white_mossy"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.GRAVEL_GRANITE).setAllTextures("pepeethings:block/gravel_granite"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.GRAVEL_PERMAFROST).setAllTextures("pepeethings:block/gravel_permafrost"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.GRAVEL_LIMESTONE).setAllTextures("pepeethings:block/gravel_limestone"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.GRAVEL_BASALT).setAllTextures("pepeethings:block/gravel_basalt"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.SAND_GRANITE).setAllTextures("pepeethings:block/sand_granite"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.SAND_PERMAFROST).setAllTextures("pepeethings:block/sand_permafrost"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.SAND_ROCKY).setAllTextures("pepeethings:block/sand_rocky"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.SAND_BASALT).setAllTextures("pepeethings:block/sand_basalt"));
+		dispatcher.addDispatch(new BlockModelGenericConcretePowder<>(ModBlocks.CONCRETE_POWDER, loadDataModel("pepeethings:block/concrete_powder/white").asModel()));
+		dispatcher.addDispatch(new BlockModelGenericConcrete<>(ModBlocks.CONCRETE, loadDataModel("pepeethings:block/concrete/white").asModel()));
+		dispatcher.addDispatch(new BlockModelGenericSlabConcretePainted<>(ModBlocks.SLAB_CONCRETE));
+		dispatcher.addDispatch(new BlockModelGenericStairsConcretePainted<>(ModBlocks.STAIRS_CONCRETE));
 
 //		ModelHelper.setBlockModel(ModBlocks.CRATE, () -> new BlockModelCrate<>(ModBlocks.CRATE).setAllTextures("pepeethings:block/crate/side"));
 	}
@@ -51,8 +82,21 @@ public class PepeeThingsModels {
 		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SICKLE_GOLD).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
 		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SICKLE_DIAMOND).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
 		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SICKLE_STEEL).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
-//		ModelHelper.setItemModel(ModItems.CHAIN, () -> new ItemModelStandard(ModItems.CHAIN));
 		dispatcher.addDispatch(new ItemModelStandard(ModItems.CHAIN));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.BRICK_CLAY_BLACK));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.BRICK_CLAY_BLUE));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.BRICK_CLAY_RED));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.BRICK_CLAY_WHITE));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.CLAY_BLACK));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.CLAY_BLUE));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.CLAY_RED));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.CLAY_WHITE));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SPADE_STONE).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SPADE_IRON).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SPADE_GOLD).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SPADE_DIAMOND).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.TOOL_SPADE_STEEL).setDisplayPos("firstperson_righthand", HANDHELD_FIRST_PERSON_RIGHT_HAND).setDisplayPos("firstperson_lefthand", HANDHELD_FIRST_PERSON_LEFT_HAND).setDisplayPos("thirdperson_righthand", HANDHELD_THIRD_PERSON_RIGHT_HAND).setDisplayPos("thirdperson_lefthand", HANDHELD_THIRD_PERSON_LEFT_HAND));
+		dispatcher.addDispatch(new ItemModelStandard(ModItems.MORTAR));
 //		ModelHelper.setItemModel(ModItems.CRATE, () -> new ItemModelStandard(ModItems.CRATE));
 	}
 
@@ -65,6 +109,7 @@ public class PepeeThingsModels {
 	}
 
 	public void initBlockColors(BlockColorDispatcher dispatcher) {
+		dispatcher.addDispatch(ModBlocks.BLOCK_CLAY_BLACK_GRASSY, new BlockColorCustom(Colorizers.grass));;
 
 	}
 }

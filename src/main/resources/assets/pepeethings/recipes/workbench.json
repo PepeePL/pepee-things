@@ -1,0 +1,1580 @@
+[
+  {
+    "name" : "pepeethings:workbench/chisel",
+    "type" : "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "SX"
+      ],
+    "symbols" : [
+      {
+        "symbol" : "X",
+        "stack" : {
+          "id" : "minecraft:item/ingot_iron"
+        }
+      },
+      {
+        "symbol" : "S",
+        "stack" : {
+          "id" : "minecraft:item/stick"
+        }
+      }
+    ],
+    "result" : {
+      "id" : "pepeethings:item/chisel",
+      "amount" : 1
+    },
+    "group" : "chisels"
+  },
+  {
+    "name" : "pepeethings:workbench/chisel_steel",
+    "type" : "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "SX"
+    ],
+    "symbols" : [
+      {
+        "symbol" : "X",
+        "stack" : {
+          "id" : "minecraft:item/ingot_steel"
+        }
+      },
+      {
+        "symbol" : "S",
+        "stack" : {
+          "id" : "minecraft:item/stick"
+        }
+      }
+    ],
+    "result" : {
+      "id" : "pepeethings:item/chisel_steel",
+      "amount" : 1
+    },
+    "group" : "chisels"
+  },
+  {
+    "name" : "pepeethings:workbench/tool_hammer_stone",
+    "type" : "minecraft:crafting/shaped",
+    "pattern" : [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols" : [
+      {
+        "symbol" : "I",
+        "group" : "minecraft:cobblestones"
+      },
+      {
+        "symbol" : "S",
+        "stack" : {
+          "id" : "minecraft:item/stick"
+        }
+      }
+    ],
+    "result" : {
+      "id" : "pepeethings:item/tool_hammer_stone",
+      "amount" : 1
+    },
+    "group" : "hammers"
+  },
+  {
+    "name": "pepeethings:workbench/tool_hammer_iron",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_iron"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_hammer_iron",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "pepeethings:workbench/tool_hammer_gold",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_gold"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_hammer_gold",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "pepeethings:workbench/tool_hammer_diamond",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/diamond"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_hammer_diamond",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name": "pepeethings:workbench/tool_hammer_steel",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "II ",
+      "IIS",
+      "II "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_steel"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_hammer_steel",
+      "amount": 1
+    },
+    "group": "hammers"
+  },
+  {
+    "name" : "pepeethings:workbench/tool_spade_stone",
+    "type" : "minecraft:crafting/shaped",
+    "pattern" : [
+      " II",
+      " SI",
+      "S  "
+    ],
+    "symbols" : [
+      {
+        "symbol" : "I",
+        "group" : "minecraft:cobblestones"
+      },
+      {
+        "symbol" : "S",
+        "stack" : {
+          "id" : "minecraft:item/stick"
+        }
+      }
+    ],
+    "result" : {
+      "id" : "pepeethings:item/tool_spade_stone",
+      "amount" : 1
+    },
+    "group" : "spades"
+  },
+  {
+    "name": "pepeethings:workbench/tool_spade_iron",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " II",
+      " SI",
+      "S  "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_iron"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_spade_iron",
+      "amount": 1
+    },
+    "group": "spades"
+  },
+  {
+    "name": "pepeethings:workbench/tool_spade_gold",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " II",
+      " SI",
+      "S  "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_gold"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_spade_gold",
+      "amount": 1
+    },
+    "group": "spades"
+  },
+  {
+    "name": "pepeethings:workbench/tool_spade_diamond",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " II",
+      " SI",
+      "S  "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/diamond"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_spade_diamond",
+      "amount": 1
+    },
+    "group": "spades"
+  },
+  {
+    "name": "pepeethings:workbench/tool_spade_steel",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " II",
+      " SI",
+      "S  "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_steel"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_spade_steel",
+      "amount": 1
+    },
+    "group": "spades"
+  },
+  {
+    "name": "pepeethings:workbench/tool_sickle_wood",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " I ",
+      "  I",
+      "SI "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "group" : "minecraft:planks"
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_sickle_wood",
+      "amount": 1
+    },
+    "group": "sickles"
+  },
+  {
+    "name": "pepeethings:workbench/tool_sickle_stone",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " I ",
+      "  I",
+      "SI "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "group" : "minecraft:cobblestones"
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_sickle_stone",
+      "amount": 1
+    },
+    "group": "sickles"
+  },
+  {
+    "name": "pepeethings:workbench/tool_sickle_iron",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " I ",
+      "  I",
+      "SI "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_iron"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_sickle_iron",
+      "amount": 1
+    },
+    "group": "sickles"
+  },
+  {
+    "name": "pepeethings:workbench/tool_sickle_gold",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " I ",
+      "  I",
+      "SI "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_gold"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_sickle_gold",
+      "amount": 1
+    },
+    "group": "sickles"
+  },
+  {
+    "name": "pepeethings:workbench/tool_sickle_diamond",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " I ",
+      "  I",
+      "SI "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/diamond"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_sickle_diamond",
+      "amount": 1
+    },
+    "group": "sickles"
+  },
+  {
+    "name": "pepeethings:workbench/tool_sickle_steel",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      " I ",
+      "  I",
+      "SI "
+    ],
+    "symbols": [
+      {
+        "symbol": "I",
+        "stack": {
+          "id": "minecraft:item/ingot_steel"
+        }
+      },
+      {
+        "symbol": "S",
+        "stack": {
+          "id": "minecraft:item/stick"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:item/tool_sickle_steel",
+      "amount": 1
+    },
+    "group": "sickles"
+  },
+  {
+    "name": "pepeethings:workbench/glass_dyeing",
+    "type": "minecraft:crafting/dyeing",
+    "useUpperMeta": false,
+    "input": {
+      "group": "pepeethings:glasses"
+    },
+    "output": {
+      "id": "pepeethings:block/glass_colored"
+    }
+  },
+  {
+    "name": "pepeethings:workbench/hibiscus_to_dye",
+    "type": "minecraft:crafting/shapeless",
+    "inputs": [
+      {
+        "stack": {
+          "id": "pepeethings:block/flower_hibiscus"
+        }
+      }
+    ],
+    "result": {
+      "id": "minecraft:item/dye",
+      "amount": 4,
+      "meta": 9
+    }
+  },
+  {
+    "name": "pepeethings:workbench/bricks_red",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/brick_clay_red"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/brick_clay_red",
+      "amount": 1
+    },
+    "group": "pepeethings_bricks"
+  },
+  {
+    "name": "pepeethings:workbench/bricks_white",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/brick_clay_white"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/brick_clay_white",
+      "amount": 1
+    },
+    "group": "pepeethings_bricks"
+  },
+  {
+    "name": "pepeethings:workbench/bricks_black",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/brick_clay_black"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/brick_clay_black",
+      "amount": 1
+    },
+    "group": "pepeethings_bricks"
+  },
+  {
+    "name": "pepeethings:workbench/bricks_blue",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/brick_clay_blue"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/brick_clay_blue",
+      "amount": 1
+    },
+    "group": "pepeethings_bricks"
+  },
+  {
+    "name": "pepeethings:workbench/clay_red",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/clay_red"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/block_clay_red",
+      "amount": 1
+    },
+    "group": "pepeethings_clays"
+  },
+  {
+    "name": "pepeethings:workbench/clay_white",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/clay_white"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/block_clay_white",
+      "amount": 1
+    },
+    "group": "pepeethings_clays"
+  },
+  {
+    "name": "pepeethings:workbench/clay_black",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/clay_black"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/block_clay_black",
+      "amount": 1
+    },
+    "group": "pepeethings_clays"
+  },
+  {
+    "name": "pepeethings:workbench/clay_blue",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "XX",
+      "XX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:item/clay_blue"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/block_clay_blue",
+      "amount": 1
+    },
+    "group": "pepeethings_clays"
+  },
+  {
+    "name": "pepeethings:workbench/grind_gravel",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "minecraft:block/cobble_stone"
+      }
+    },
+    "output": {
+      "id": "minecraft:block/gravel"
+    },
+    "group": "grinding_gravel"
+  },
+  {
+    "name": "pepeethings:workbench/grind_gravel_basalt",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "minecraft:block/cobble_basalt"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/gravel_basalt"
+    },
+    "group": "grinding_gravel"
+  },
+  {
+    "name": "pepeethings:workbench/grind_gravel_limestone",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "minecraft:block/cobble_limestone"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/gravel_limestone"
+    },
+    "group": "grinding_gravel"
+  },
+  {
+    "name": "pepeethings:workbench/grind_gravel_granite",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "minecraft:block/cobble_granite"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/gravel_granite"
+    },
+    "group": "grinding_gravel"
+  },
+  {
+    "name": "pepeethings:workbench/grind_gravel_permafrost",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "minecraft:block/cobble_permafrost"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/gravel_permafrost"
+    },
+    "group": "grinding_gravel"
+  },
+  {
+    "name": "pepeethings:workbench/grind_brimsand",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "minecraft:block/brimstone"
+      }
+    },
+    "output": {
+      "id": "minecraft:block/brimsand"
+    }
+  },
+  {
+    "name": "pepeethings:workbench/grind_sand_rocky",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "minecraft:block/gravel"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/sand_rocky"
+    },
+    "group": "grinding_sand"
+  },
+  {
+    "name": "pepeethings:workbench/grind_sand_granite",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/gravel_granite"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/sand_granite"
+    },
+    "group": "grinding_sand"
+  },
+  {
+    "name": "pepeethings:workbench/grind_sand_permafrost",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/gravel_permafrost"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/sand_permafrost"
+    },
+    "group": "grinding_sand"
+  },
+  {
+    "name": "pepeethings:workbench/grind_sand_basalt",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/gravel_basalt"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/sand_basalt"
+    },
+    "group": "grinding_sand"
+  },
+  {
+    "name": "pepeethings:workbench/grind_sand",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/gravel_limestone"
+      }
+    },
+    "output": {
+      "id": "minecraft:block/sand"
+    },
+    "group": "grinding_sand"
+  },
+  {
+    "name": "pepeethings:workbench/concrete_powder_dyeing",
+    "type": "minecraft:crafting/dyeing",
+    "useUpperMeta": false,
+    "input": {
+      "group": "pepeethings:concrete_powders"
+    },
+    "output": {
+      "id": "pepeethings:block/concrete_powder"
+    }
+  },
+  {
+    "name": "pepeethings:workbench/white_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 0
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/white_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 0
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 0
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/orange_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 1
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 16
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/orange_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 1
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 16
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/magenta_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 2
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 32
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/magenta_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 2
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 32
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/lightblue_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 3
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 48
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/lightblue_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 3
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 48
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/yellow_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 4
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 64
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/yellow_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 4
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 64
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/lime_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 5
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 80
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/lime_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 5
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 80
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/pink_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 6
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 96
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/pink_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 6
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 96
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/gray_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 7
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 112
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/gray_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 7
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 112
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/silver_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 8
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 128
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/silver_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 8
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 128
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/cyan_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 9
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 144
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/cyan_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 9
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 144
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/purple_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 10
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 160
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/purple_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 10
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 160
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/blue_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 11
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 176
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/blue_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 11
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 176
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/brown_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 12
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 192
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/brown_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 12
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 192
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/green_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 13
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 208
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/green_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 13
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 208
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/red_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 14
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 224
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/red_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 14
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 224
+    },
+    "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/black_concrete_slab",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 15
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/slab_concrete",
+      "amount": 6,
+      "meta": 240
+    },
+    "group": "concrete_slabs"
+  },
+  {
+    "name": "pepeethings:workbench/black_concrete_stairs",
+    "type": "minecraft:crafting/shaped",
+    "pattern": [
+      "X  ",
+      "XX ",
+      "XXX"
+    ],
+    "symbols": [
+      {
+        "symbol": "X",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 15
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/stairs_concrete",
+      "amount": 6,
+      "meta": 240
+    },
+    "group": "concrete_stairs"
+  }
+]

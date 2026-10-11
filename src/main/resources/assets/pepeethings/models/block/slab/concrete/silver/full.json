@@ -1,0 +1,6 @@
+﻿{
+    "textures":  {
+                     "all":  "pepeethings:block/concrete/silver"
+                 },
+    "parent":  "minecraft:block/cube_all"
+}

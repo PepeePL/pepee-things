@@ -1,0 +1,8 @@
+﻿{
+    "textures":  {
+                     "bottom":  "pepeethings:block/concrete/gray",
+                     "top":  "pepeethings:block/concrete/gray",
+                     "side":  "pepeethings:block/concrete/gray"
+                 },
+    "parent":  "minecraft:block/slab/lower"
+}

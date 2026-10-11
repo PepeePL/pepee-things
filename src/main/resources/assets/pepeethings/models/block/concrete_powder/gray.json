@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "pepeethings:block/concrete_powder/gray"
+  }
+}

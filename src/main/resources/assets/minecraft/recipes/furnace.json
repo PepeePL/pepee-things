@@ -1,0 +1,13 @@
+[
+  {
+    "name": "minecraft:furnace/sand_to_glass",
+    "type": "minecraft:smelting",
+    "input": {
+      "group": "pepeethings:sands"
+
+    },
+    "output": {
+      "id": "minecraft:block/glass"
+    }
+  }
+]
