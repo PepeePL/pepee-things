@@ -45,8 +45,9 @@ public class ItemToolHammer extends ItemTool {
 	@Override
 	public boolean onBlockDestroyed(@NotNull ItemStack itemStack, @NotNull World world, @NotNull Mob mob, @NotNull Block<?> removedBlock, @NotNull TilePosc blockPos, @NotNull Side side) {
 		Player player = (Player) mob;
-			if ((removedBlock.getHardness() > 0.0F || this.isSilkTouch()) && !player.isSneaking()) {
+			if ((removedBlock.getHardness() > 0.0F || this.isSilkTouch())) {
 				itemStack.damageItem(4, player);
+				if (player.isSneaking()) return true;
 				if (side == Side.NORTH || side == Side.SOUTH) {
 					for (int dx = -1; dx <= 1; dx++) {
 						for (int dy = -1; dy <= 1; dy++) {
