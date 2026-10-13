@@ -46,5 +46,17 @@
     "output": {
       "id": "pepeethings:item/brick_clay_white"
     }
+  },
+  {
+    "name": "pepeethings:furnace/basalt_sand_to_glass",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/sand_basalt"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/glass_clear"
+    }
   }
 ]

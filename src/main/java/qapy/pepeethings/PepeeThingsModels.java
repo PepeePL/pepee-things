@@ -5,6 +5,7 @@ import net.minecraft.client.render.TileEntityRenderDispatcher;
 import net.minecraft.client.render.block.color.BlockColorCustom;
 import net.minecraft.client.render.block.color.BlockColorDispatcher;
 import net.minecraft.client.render.block.model.BlockModelDispatcher;
+import net.minecraft.client.render.block.model.BlockModelGlass;
 import net.minecraft.client.render.block.model.BlockModelStandard;
 import net.minecraft.client.render.block.model.generic.BlockModelGeneric;
 import net.minecraft.client.render.colorizer.Colorizers;
@@ -50,6 +51,9 @@ public class PepeeThingsModels {
 		dispatcher.addDispatch(new BlockModelGenericConcrete<>(ModBlocks.CONCRETE, loadDataModel("pepeethings:block/concrete/white").asModel()));
 		dispatcher.addDispatch(new BlockModelGenericSlabConcretePainted<>(ModBlocks.SLAB_CONCRETE));
 		dispatcher.addDispatch(new BlockModelGenericStairsConcretePainted<>(ModBlocks.STAIRS_CONCRETE));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BLUESCREEN).setAllTextures("pepeethings:block/screen_blue"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.GREENSCREEN).setAllTextures("pepeethings:block/screen_green"));
+		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_CLEAR, "pepeethings:block/glass_clear/").setAllTextures("pepeethings:block/glass_clear/none"));
 
 //		ModelHelper.setBlockModel(ModBlocks.CRATE, () -> new BlockModelCrate<>(ModBlocks.CRATE).setAllTextures("pepeethings:block/crate/side"));
 	}

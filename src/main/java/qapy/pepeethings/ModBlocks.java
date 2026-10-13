@@ -51,6 +51,9 @@ public class ModBlocks {
 	public static Block<?> CONCRETE;
 	public static Block<?> SLAB_CONCRETE;
 	public static Block<?> STAIRS_CONCRETE;
+	public static Block<?> BLUESCREEN;
+	public static Block<?> GREENSCREEN;
+	public static Block<?> GLASS_CLEAR;
 
 	public void initBlocks(){
 		GLASS_COLORED = new BlockBuilder(MOD_ID)
@@ -258,5 +261,23 @@ public class ModBlocks {
 			.setBlockItem(ItemBlockStairsPainted::new)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		BLUESCREEN = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
+			.build("bluescreen", "bluescreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
+			.withHardness(1.0F)
+			.withSound(BlockSounds.STONE)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		GREENSCREEN = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
+			.build("greenscreen", "greenscreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
+			.withHardness(1.0F)
+			.withSound(BlockSounds.STONE)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		GLASS_CLEAR = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.WORKBENCHES))
+			.build("glass.clear", "glass_clear", blockID(), (b -> new BlockLogicGlass(b, Materials.GLASS)))
+			.withHardness(0.3F)
+			.withSound(BlockSounds.GLASS)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.EXTENDS_MOTION_SENSOR_RANGE);
 	}
 }

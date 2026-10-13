@@ -494,6 +494,64 @@
     "group": "sickles"
   },
   {
+    "name": "pepeethings:workbench/bluescreen",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "CGC",
+      "GCG",
+      "CGC"
+    ],
+    "symbols": [
+      {
+        "symbol": "C",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 11
+        }
+      },
+      {
+        "symbol": "G",
+        "stack": {
+          "id": "minecraft:block/glowstone"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/bluescreen",
+      "amount": 8
+    },
+    "group": "screens"
+  },
+  {
+    "name": "pepeethings:workbench/greenscreen",
+    "type": "minecraft:crafting/shaped",
+    "pattern" : [
+      "CGC",
+      "GCG",
+      "CGC"
+    ],
+    "symbols": [
+      {
+        "symbol": "C",
+        "stack": {
+          "id": "pepeethings:block/concrete",
+          "meta": 5
+        }
+      },
+      {
+        "symbol": "G",
+        "stack": {
+          "id": "minecraft:block/glowstone"
+        }
+      }
+    ],
+    "result": {
+      "id": "pepeethings:block/greenscreen",
+      "amount": 8
+    },
+    "group": "screens"
+  },
+  {
     "name": "pepeethings:workbench/glass_dyeing",
     "type": "minecraft:crafting/dyeing",
     "useUpperMeta": false,
