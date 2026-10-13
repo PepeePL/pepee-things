@@ -51,8 +51,6 @@ public class ModBlocks {
 	public static Block<?> CONCRETE;
 	public static Block<?> SLAB_CONCRETE;
 	public static Block<?> STAIRS_CONCRETE;
-	public static Block<?> BLUESCREEN;
-	public static Block<?> GREENSCREEN;
 
 	public void initBlocks(){
 		GLASS_COLORED = new BlockBuilder(MOD_ID)
@@ -125,112 +123,112 @@ public class ModBlocks {
 			.withSound(BlockSounds.GRASS)
 			.withTags(BlockTags.BROKEN_BY_FLUIDS, BlockTags.PLANTABLE_IN_JAR, BlockTags.SHEEPS_FAVOURITE_BLOCK, BlockTags.SHEARS_DO_SILK_TOUCH);
 		BRICK_CLAY_BLACK = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.black", "brick_clay_black", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_BLUE = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.blue", "brick_clay_blue", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_RED = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.red", "brick_clay_red", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_WHITE = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.white", "brick_clay_white", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_MOSSY = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.mossy", "brick_clay_mossy", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_BLACK_MOSSY = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.black.mossy", "brick_clay_black_mossy", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_BLUE_MOSSY = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.blue.mossy", "brick_clay_blue_mossy", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_RED_MOSSY = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.red.mossy", "brick_clay_red_mossy", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		BRICK_CLAY_WHITE_MOSSY = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("brick.clay.white.mossy", "brick_clay_white_mossy", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(2F)
 			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 		GRAVEL_GRANITE = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("gravel.granite", "gravel_granite", blockID(), (b -> new BlockLogicGravelBase(b, ModBlocks.SAND_GRANITE)))
 			.withHardness(0.6F)
 			.withSound(BlockSounds.GRAVEL)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		GRAVEL_PERMAFROST = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("gravel.permafrost", "gravel_permafrost", blockID(), (b -> new BlockLogicGravelBase(b, ModBlocks.SAND_PERMAFROST)))
 			.withHardness(0.6F)
 			.withSound(BlockSounds.GRAVEL)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		GRAVEL_LIMESTONE = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("gravel.limestone", "gravel_limestone", blockID(), (b -> new BlockLogicGravelBase(b, Blocks.SAND)))
 			.withHardness(0.6F)
 			.withSound(BlockSounds.GRAVEL)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		GRAVEL_BASALT = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("gravel.basalt", "gravel_basalt", blockID(), (b -> new BlockLogicGravelBase(b, ModBlocks.SAND_BASALT)))
 			.withHardness(0.6F)
 			.withSound(BlockSounds.GRAVEL)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		SAND_GRANITE = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("sand.granite", "sand_granite", blockID(), (b -> new BlockLogicFallingBlock(b, Materials.SAND)))
 			.withHardness(0.5F)
 			.withSound(BlockSounds.SAND)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		SAND_PERMAFROST = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("sand.permafrost", "sand_permafrost", blockID(), (b -> new BlockLogicFallingBlock(b, Materials.SAND)))
 			.withHardness(0.5F)
 			.withSound(BlockSounds.SAND)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		SAND_ROCKY = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("sand.rocky", "sand_rocky", blockID(), (b -> new BlockLogicFallingBlock(b, Materials.SAND)))
 			.withHardness(0.5F)
 			.withSound(BlockSounds.SAND)
 			.withTags(BlockTags.MINEABLE_BY_SHOVEL);
 		SAND_BASALT = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.BASICS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
 			.build("sand.basalt", "sand_basalt", blockID(), (b -> new BlockLogicFallingBlock(b, Materials.SAND)))
 			.withHardness(0.5F)
 			.withSound(BlockSounds.SAND)
@@ -258,18 +256,6 @@ public class ModBlocks {
 			.build("stairs.concrete", "stairs_concrete", blockID(), (b -> new BlockLogicStairsPainted(b, ModBlocks.CONCRETE)))
 			.withHardness(1.8F)
 			.setBlockItem(ItemBlockStairsPainted::new)
-			.withSound(BlockSounds.STONE)
-			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
-		BLUESCREEN = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
-			.build("bluescreen", "bluescreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
-			.withHardness(1.0F)
-			.withSound(BlockSounds.STONE)
-			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
-		GREENSCREEN = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
-			.build("greenscreen", "greenscreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
-			.withHardness(1.0F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 	}

@@ -60,7 +60,7 @@ public class ModItems {
 
 	public void initItems(){
 		CHISEL = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISC_TOOLS))
 			.build(new ItemChisel("chisel", "pepeethings:item/chisel", itemID(), true));
 		CHISEL_STEEL = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
@@ -146,28 +146,28 @@ public class ModItems {
 		CRATE = new ItemBuilder(MOD_ID)
 			.build(new ItemPlaceable("crate", "pepeethings:item/crate", itemID(), ModBlocks.CRATE));
 		CLAY_BLACK = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("clay.black", "pepeethings:item/clay_black", itemID()));
 		BRICK_CLAY_BLACK = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("brick.clay.black", "pepeethings:item/brick_clay_black", itemID()));
 		CLAY_BLUE = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("clay.blue", "pepeethings:item/clay_blue", itemID()));
 		BRICK_CLAY_BLUE = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("brick.clay.blue", "pepeethings:item/brick_clay_blue", itemID()));
 		CLAY_RED = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("clay.red", "pepeethings:item/clay_red", itemID()));
 		BRICK_CLAY_RED = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("brick.clay.red", "pepeethings:item/brick_clay_red", itemID()));
 		CLAY_WHITE = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("clay.white", "pepeethings:item/clay_white", itemID()));
 		BRICK_CLAY_WHITE = new ItemBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.ORE_PRODUCTS))
 			.build(new Item("brick.clay.white", "pepeethings:item/brick_clay_white", itemID()));
 		TOOL_SPADE_STONE = new ItemBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.TOOLS))
