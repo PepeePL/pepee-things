@@ -18,7 +18,7 @@ import static net.minecraft.client.render.item.model.ItemModelDispatcher.*;
 
 public class PepeeThingsModels {
 	public void initBlockModels(BlockModelDispatcher dispatcher) {
-		dispatcher.addDispatch(new BlockModelGenericGlassColored<>(ModBlocks.GLASS_COLORED, loadDataModel("pepeethings:block/glass/white").asModel()));
+		dispatcher.addDispatch(new BlockModelGenericGlassColored<>(ModBlocks.GLASS_COLORED, loadDataModel("pepeethings:block/glass_colored/white").asModel()));
 		dispatcher.addDispatch(new BlockModelGenericCrops<>(ModBlocks.CROPS_CARROT, "crops_carrot"));
 		dispatcher.addDispatch(new BlockModelGenericCrops<>(ModBlocks.CROPS_POTATO, "crops_potato"));
 		dispatcher.addDispatch(new BlockModelGenericCrops<>(ModBlocks.CROPS_TOMATO, "crops_tomato"));

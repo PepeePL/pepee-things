@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "pepeethings:block/glass/green"
+    "all": "pepeethings:block/glass_colored/blue"
   },
   "renderlayer": 1
 }

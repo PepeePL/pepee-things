@@ -51,6 +51,8 @@ public class ModBlocks {
 	public static Block<?> CONCRETE;
 	public static Block<?> SLAB_CONCRETE;
 	public static Block<?> STAIRS_CONCRETE;
+	public static Block<?> BLUESCREEN;
+	public static Block<?> GREENSCREEN;
 
 	public void initBlocks(){
 		GLASS_COLORED = new BlockBuilder(MOD_ID)
@@ -256,6 +258,18 @@ public class ModBlocks {
 			.build("stairs.concrete", "stairs_concrete", blockID(), (b -> new BlockLogicStairsPainted(b, ModBlocks.CONCRETE)))
 			.withHardness(1.8F)
 			.setBlockItem(ItemBlockStairsPainted::new)
+			.withSound(BlockSounds.STONE)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		BLUESCREEN = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
+			.build("bluescreen", "bluescreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
+			.withHardness(1.0F)
+			.withSound(BlockSounds.STONE)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		GREENSCREEN = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
+			.build("greenscreen", "greenscreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
+			.withHardness(1.0F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 	}

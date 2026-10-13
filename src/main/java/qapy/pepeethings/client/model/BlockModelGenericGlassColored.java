@@ -19,7 +19,7 @@ public class BlockModelGenericGlassColored<T extends BlockLogic> extends BlockMo
 		super(block, staticModel);
 
 		for(DyeColor c : DyeColor.blockOrderedColors()) {
-			this.models[c.blockMeta] = BlockModelDispatcher.loadDataModel("pepeethings:block/glass/" + c.colorID).asModel();
+			this.models[c.blockMeta] = BlockModelDispatcher.loadDataModel("pepeethings:block/glass_colored/" + c.colorID).asModel();
 		}
 
 	}
@@ -28,7 +28,7 @@ public class BlockModelGenericGlassColored<T extends BlockLogic> extends BlockMo
 		super(block, staticModel);
 
 		for(DyeColor c : DyeColor.blockOrderedColors()) {
-			this.models[c.blockMeta] = BlockModelDispatcher.loadDataModel("pepeethings:block/glass/" + c.colorID).asModel();
+			this.models[c.blockMeta] = BlockModelDispatcher.loadDataModel("pepeethings:block/glass_colored/" + c.colorID).asModel();
 		}
 
 	}
