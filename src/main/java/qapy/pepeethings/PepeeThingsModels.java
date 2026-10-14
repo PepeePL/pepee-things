@@ -116,7 +116,7 @@ public class PepeeThingsModels {
 	}
 
 	public void initBlockColors(BlockColorDispatcher dispatcher) {
-		dispatcher.addDispatch(ModBlocks.BLOCK_CLAY_BLACK_GRASSY, new BlockColorCustom(Colorizers.grass));;
+		dispatcher.addDispatch(ModBlocks.BLOCK_CLAY_BLACK_GRASSY, new BlockColorCustom(Colorizers.grass));
 
 	}
 }

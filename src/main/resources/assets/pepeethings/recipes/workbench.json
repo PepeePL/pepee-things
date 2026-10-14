@@ -563,6 +563,16 @@
     }
   },
   {
+    "name": "pepeethings:workbench/glass_undyeing",
+    "type": "minecraft:crafting/undyeing",
+    "input": {
+      "group": "pepeethings:glasses"
+    },
+    "output": {
+      "id": "minecraft:block/glass"
+    }
+  },
+  {
     "name": "pepeethings:workbench/hibiscus_to_dye",
     "type": "minecraft:crafting/shapeless",
     "inputs": [
