@@ -51,9 +51,12 @@ public class ModBlocks {
 	public static Block<?> CONCRETE;
 	public static Block<?> SLAB_CONCRETE;
 	public static Block<?> STAIRS_CONCRETE;
+	public static Block<?> GLASS_CLEAR;
+	public static Block<?> GLASS_BUBBLE;
+	public static Block<?> GLASS_PATTERNED;
+	public static Block<?> GLASS_FRAMED;
 	public static Block<?> BLUESCREEN;
 	public static Block<?> GREENSCREEN;
-	public static Block<?> GLASS_CLEAR;
 
 	public void initBlocks(){
 		GLASS_COLORED = new BlockBuilder(MOD_ID)
@@ -261,6 +264,30 @@ public class ModBlocks {
 			.setBlockItem(ItemBlockStairsPainted::new)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		GLASS_CLEAR = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.WORKBENCHES))
+			.build("glass.clear", "glass_clear", blockID(), (b -> new BlockLogicGlass(b, Materials.GLASS)))
+			.withHardness(0.3F)
+			.withSound(BlockSounds.GLASS)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.EXTENDS_MOTION_SENSOR_RANGE);
+		GLASS_BUBBLE = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.WORKBENCHES))
+			.build("glass.bubble", "glass_bubble", blockID(), (b -> new BlockLogicGlass(b, Materials.GLASS)))
+			.withHardness(0.3F)
+			.withSound(BlockSounds.GLASS)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.EXTENDS_MOTION_SENSOR_RANGE);
+		GLASS_PATTERNED = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.WORKBENCHES))
+			.build("glass.patterned", "glass_patterned", blockID(), (b -> new BlockLogicGlass(b, Materials.GLASS)))
+			.withHardness(0.3F)
+			.withSound(BlockSounds.GLASS)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.EXTENDS_MOTION_SENSOR_RANGE);
+		GLASS_FRAMED = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.WORKBENCHES))
+			.build("glass.framed", "glass_framed", blockID(), (b -> new BlockLogicGlass(b, Materials.GLASS)))
+			.withHardness(0.3F)
+			.withSound(BlockSounds.GLASS)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.EXTENDS_MOTION_SENSOR_RANGE);
 		BLUESCREEN = new BlockBuilder(MOD_ID)
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
 			.build("bluescreen", "bluescreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
@@ -273,11 +300,5 @@ public class ModBlocks {
 			.withHardness(1.0F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
-		GLASS_CLEAR = new BlockBuilder(MOD_ID)
-			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.WORKBENCHES))
-			.build("glass.clear", "glass_clear", blockID(), (b -> new BlockLogicGlass(b, Materials.GLASS)))
-			.withHardness(0.3F)
-			.withSound(BlockSounds.GLASS)
-			.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.EXTENDS_MOTION_SENSOR_RANGE);
 	}
 }

@@ -26,7 +26,6 @@ public class PepeeThingsRecipes {
 		registerGroups();
 		DataLoader.loadRecipesFromFile("/assets/" + MOD_ID + "/recipes/workbench.json");
 		DataLoader.loadRecipesFromFile("/assets/" + MOD_ID + "/recipes/furnace.json");
-		DataLoader.loadRecipesFromFile("/assets/minecraft/recipes/furnace.json");
 		RecipeBuilderShaped netRecipe = new RecipeBuilderShaped(MOD_ID, "  W", " SW", "S " );
 		netRecipe.addInput('S', Items.STICK).addInput('W', "minecraft:wools").create("net", ModItems.NET.getDefaultStack());
 		RecipeBuilderShaped chainRecipe = new RecipeBuilderShaped(MOD_ID, "S", "S");

@@ -58,5 +58,41 @@
     "output": {
       "id": "pepeethings:block/glass_clear"
     }
+  },
+  {
+    "name": "pepeethings:furnace/permafrost_sand_to_glass",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/sand_permafrost"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/glass_bubble"
+    }
+  },
+  {
+    "name": "pepeethings:furnace/granite_sand_to_glass",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/sand_granite"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/glass_patterned"
+    }
+  },
+  {
+    "name": "pepeethings:furnace/rocky_sand_to_glass",
+    "type": "minecraft:smelting",
+    "input": {
+      "stack": {
+        "id": "pepeethings:block/sand_rocky"
+      }
+    },
+    "output": {
+      "id": "pepeethings:block/glass_framed"
+    }
   }
 ]

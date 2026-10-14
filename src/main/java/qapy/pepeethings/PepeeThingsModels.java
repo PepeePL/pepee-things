@@ -54,6 +54,9 @@ public class PepeeThingsModels {
 		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BLUESCREEN).setAllTextures("pepeethings:block/screen_blue"));
 		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.GREENSCREEN).setAllTextures("pepeethings:block/screen_green"));
 		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_CLEAR, "pepeethings:block/glass_clear/").setAllTextures("pepeethings:block/glass_clear/none"));
+		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_BUBBLE, "pepeethings:block/glass_bubble/").setAllTextures("pepeethings:block/glass_bubble/none"));
+		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_PATTERNED, "pepeethings:block/glass_patterned/").setAllTextures("pepeethings:block/glass_patterned/none"));
+		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_FRAMED, "pepeethings:block/glass_framed/").setAllTextures("pepeethings:block/glass_framed/none"));
 
 //		ModelHelper.setBlockModel(ModBlocks.CRATE, () -> new BlockModelCrate<>(ModBlocks.CRATE).setAllTextures("pepeethings:block/crate/side"));
 	}

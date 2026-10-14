@@ -294,5 +294,17 @@ tile.pepeethings.stairs.concrete.white.name=White Concrete Stairs
 tile.pepeethings.stairs.concrete.white.desc=Concrete block used for rapid vertical movement. Dyed white.
 tile.pepeethings.stairs.concrete.yellow.name=Yellow Concrete Stairs
 tile.pepeethings.stairs.concrete.yellow.desc=Concrete block used for rapid vertical movement. Dyed yellow.
+tile.pepeethings.glass.clear.name=Clear Glass
+tile.pepeethings.glass.clear.desc=Basalt sand heated until it becomes transparent. So clear!
+tile.pepeethings.glass.bubble.name=Bubble Glass
+tile.pepeethings.glass.bubble.desc=Permafrost sand heated until it becomes transparent. Chillingly pretty!
+tile.pepeethings.glass.patterned.name=Patterned Glass
+tile.pepeethings.glass.patterned.desc=Granite sand heated until it becomes transparent. So geometric!
+tile.pepeethings.glass.framed.name=Framed Glass
+tile.pepeethings.glass.framed.desc=Rocky sand heated until it becomes transparent. Cheaper than framed glass.
+tile.pepeethings.bluescreen.name=Blue Screen
+tile.pepeethings.bluescreen.desc=Used to make a blue screen for video editing
+tile.pepeethings.greenscreen.name=Green Screen
+tile.pepeethings.greenscreen.desc=Used to make a green screen for video editing
 
 subtitles.item.chisel.use=Chiseling block
