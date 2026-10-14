@@ -16,11 +16,13 @@ public class RecipeEntryGrinding extends RecipeEntryCraftingDynamic implements H
 	public RecipeSymbol inputSymbol;
 	public RecipeSymbol toolToUse;
 	public ItemStack output;
+	public int yield;
 
 	public RecipeEntryGrinding(RecipeSymbol input, ItemStack output) {
 		this.inputSymbol = input;
 		this.output = output;
 		this.toolToUse = new RecipeSymbol(new ItemStack(ModItems.MORTAR));
+		this.yield = 1;
 	}
 	public RecipeEntryGrinding(){
 
@@ -164,7 +166,7 @@ public class RecipeEntryGrinding extends RecipeEntryCraftingDynamic implements H
 
 		}
 
-		return new ItemStack(this.output.getItem(), items);
+		return new ItemStack(this.output.getItem(), items * this.yield);
 	}
 	@Override
 	public ItemStack[] onCraftResult(ContainerCrafting containerCrafting) {
@@ -190,7 +192,7 @@ public class RecipeEntryGrinding extends RecipeEntryCraftingDynamic implements H
 					} else if (stack.stackSize - 1 == 0) {
 						stack2 = null;
 					} else {
-						stack2 = new ItemStack(stack.getItem(), stack.stackSize - 1);
+						stack2 = new ItemStack(stack.getItem(), stack.stackSize - 1, stack.getMetadata());
 					}
 					containerCrafting.setSlotContentsAt(x, y, stack2);
 				}

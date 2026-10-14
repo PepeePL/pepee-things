@@ -1644,5 +1644,16 @@
       "meta": 240
     },
     "group": "concrete_stairs"
+  },
+  {
+    "name": "pepeethings:workbench/grind_wool",
+    "type": "pepeethings:crafting/grinding",
+    "input": {
+      "group": "minecraft:wools"
+    },
+    "output": {
+      "id": "minecraft:item/string"
+    },
+    "yield": 3
   }
 ]

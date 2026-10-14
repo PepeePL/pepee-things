@@ -18,7 +18,7 @@ public class DisplayAdapterGrinding implements RecipeDisplayAdapter<RecipeEntryG
 	}
 
 	public List<SlotGuidebook> getSlots(RecipeEntryGrinding recipe, int recipeAmount, int xOffset, int yOffset) {
-		List<SlotGuidebook> recipeSlots = new ArrayList();
+		List<SlotGuidebook> recipeSlots = new ArrayList<>();
 		RecipeSymbol[] symbols = new RecipeSymbol[]{recipe.inputSymbol, recipe.toolToUse, null, null, new RecipeSymbol(recipe.output)};
 
 		for(int i = 0; i < 4; ++i) {
@@ -34,8 +34,9 @@ public class DisplayAdapterGrinding implements RecipeDisplayAdapter<RecipeEntryG
 			recipeSlots.add(slot);
 		}
 
-		int centerY = (((SlotGuidebook)recipeSlots.get(recipeSlots.size() - 1)).y + ((SlotGuidebook)recipeSlots.get(recipeSlots.size() - 3)).y) / 2;
-		recipeSlots.add((new SlotGuidebook(symbols.length - 1, 81 + xOffset, centerY, symbols[4], false, recipe)).setAsOutput());
+		RecipeSymbol outputSymbol = new RecipeSymbol(new ItemStack(recipe.output.getItem(), recipe.yield));
+		int centerY = (recipeSlots.get(recipeSlots.size() - 1).y + recipeSlots.get(recipeSlots.size() - 3).y) / 2;
+		recipeSlots.add((new SlotGuidebook(symbols.length - 1, 81 + xOffset, centerY, outputSymbol, false, recipe)).setAsOutput());
 		return recipeSlots;
 	}
 
@@ -49,10 +50,10 @@ public class DisplayAdapterGrinding implements RecipeDisplayAdapter<RecipeEntryG
 			Random r = new Random();
 			if (this.symbol != null && this.symbol.getItemGroup() != null) {
 				List<ItemStack> list = this.symbol.resolve();
-				ItemStack newItem = (ItemStack)list.get(r.nextInt(list.size()));
+				ItemStack newItem = list.get(r.nextInt(list.size()));
 				if (list.size() > 1) {
 					while(newItem == this.item) {
-						newItem = (ItemStack)list.get(r.nextInt(list.size()));
+						newItem = list.get(r.nextInt(list.size()));
 					}
 				}
 

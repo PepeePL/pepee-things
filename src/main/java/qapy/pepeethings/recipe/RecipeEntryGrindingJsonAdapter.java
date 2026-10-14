@@ -4,7 +4,6 @@ import com.google.gson.*;
 import net.minecraft.core.data.registry.Registries;
 import net.minecraft.core.data.registry.recipe.RecipeSymbol;
 import net.minecraft.core.data.registry.recipe.adapter.RecipeJsonAdapter;
-import net.minecraft.core.data.registry.recipe.entry.RecipeEntryCraftingWithTool;
 import net.minecraft.core.item.ItemStack;
 
 import java.lang.reflect.Type;
@@ -16,6 +15,9 @@ public class RecipeEntryGrindingJsonAdapter implements RecipeJsonAdapter<RecipeE
 		RecipeSymbol input = context.deserialize(object.get("input"), RecipeSymbol.class);
 		ItemStack output = context.deserialize(object.get("output"), ItemStack.class);
 		RecipeEntryGrinding recipe = new RecipeEntryGrinding(input, output);
+		if (object.has("yield")) {
+			recipe.yield = object.get("yield").getAsInt();
+		}
 		return recipe;
 	}
 
@@ -25,6 +27,9 @@ public class RecipeEntryGrindingJsonAdapter implements RecipeJsonAdapter<RecipeE
 		object.addProperty("type", Registries.RECIPE_TYPES.getKey(src.getClass()));
 		object.add("input", context.serialize(src.inputSymbol));
 		object.add("output", context.serialize(src.output));
+		if (src.yield != 1) {
+			object.addProperty("yield", src.yield);
+		}
 		return object;
 	}
 }
