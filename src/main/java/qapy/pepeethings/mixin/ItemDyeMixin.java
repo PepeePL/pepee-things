@@ -26,10 +26,17 @@ public class ItemDyeMixin {
 		if (getMossyBlocks().contains(block)) {
 			if (!world.isClientSide) {
 				int randomInt = new Random().nextInt(3) + 1;
-				EntityItem entityItem = new EntityItem(world, (player.x + blockPos.x())/2, blockPos.y(), (player.z + blockPos.z())/2, new ItemStack(ModItems.MOSS, randomInt));
-				entityItem.dropItem(entityItem.item, 0);
-				if (player.getGamemode().hasBlockConsumption()) {
-					--selfStack.stackSize;
+				if(player != null) {
+					EntityItem entityItem = new EntityItem(world, (player.x + blockPos.x()) / 2, blockPos.y(), (player.z + blockPos.z()) / 2, new ItemStack(ModItems.MOSS, randomInt));
+					entityItem.dropItem(entityItem.item, 0);
+					if (player.getGamemode().hasBlockConsumption()) {
+						selfStack.stackSize--;
+					}
+				}
+				else {
+					EntityItem entityItem = new EntityItem(world, blockPos.x() + 0.5, blockPos.y() + 0.5, blockPos.z() + 0.5, new ItemStack(ModItems.MOSS, randomInt));
+					entityItem.dropItem(entityItem.item, 0);
+					selfStack.stackSize--;
 				}
 			}
 			cir.setReturnValue(true);
