@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 import qapy.pepeethings.util.SeedsRegistry;
 
-@Mixin(value = ItemToolHoe.class, remap = false)
+@Mixin(value = ItemToolHoe.class)
 public abstract class ItemToolHoeMixin {
 	@Redirect(method = "till",
 			at = @At(

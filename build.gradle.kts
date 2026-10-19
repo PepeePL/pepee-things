@@ -45,6 +45,7 @@ dependencies {
 	compileOnly(libs.joml)
 	compileOnly(libs.joml.primitives)
 	compileOnly(libs.slf4jApi)
+	compileOnly(project(":spice-of-life-bta"))
 
 	// Only required for development/launch at runtime, won't be part of any builds
 	localRuntime(libs.modMenu) // Optional, can be removed
@@ -84,6 +85,7 @@ val licenseFile = run {
 		}
 	}
 }
+
 tasks {
 	withType<JavaCompile>().configureEach {
 		options.encoding = "UTF-8"

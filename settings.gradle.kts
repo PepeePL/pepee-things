@@ -57,3 +57,5 @@ pluginManagement {
 plugins {
 	id("org.gradle.toolchains.foojay-resolver-convention")
 }
+include(":spice-of-life-bta")
+project(":spice-of-life-bta").projectDir = file("../spice-of-life-bta")

@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 import qapy.pepeethings.ModItems;
 
-@Mixin(value = Mob.class, remap = false)
+@Mixin(value = Mob.class)
 public abstract class MobMixin {
 	@Shadow
 	public byte chatColor;

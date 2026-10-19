@@ -20,7 +20,7 @@ import static qapy.pepeethings.util.MossRegistry.getMossyBlocks;
 
 @Mixin(value = ItemDye.class)
 public class ItemDyeMixin {
-	@Inject(method = "onUseOnBlock", at = @At(value = "NEW", target = "Lnet/minecraft/core/world/pos/TilePos;"), cancellable = true)
+	@Inject(method = "onUseOnBlock", at = @At(value = "NEW", target = "Lnet/minecraft/core/world/pos/TilePos;", ordinal = 0), cancellable = true)
 	private void handleMossBlocks(ItemStack selfStack, World world, Player player, TilePosc blockPos, Side side, double xPlaced, double yPlaced, CallbackInfoReturnable<Boolean> cir) {
 		Block<?> block = world.getBlockType(blockPos);
 		if (getMossyBlocks().contains(block)) {

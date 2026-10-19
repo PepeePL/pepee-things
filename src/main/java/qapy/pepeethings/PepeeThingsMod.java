@@ -10,6 +10,8 @@ import turniplabs.halplibe.HalpLibe;
 import turniplabs.halplibe.event.defs.CommonEvents;
 import turniplabs.halplibe.util.dependency.Key;
 
+import static qapy.pepeethings.compat.SpiceOfLifeCompat.addSpiceOfLifeCompat;
+
 public class PepeeThingsMod implements ModInitializer{
 	public static final String MOD_ID = HalpLibe.registerMod("pepeethings", true);
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
@@ -29,7 +31,7 @@ public class PepeeThingsMod implements ModInitializer{
 		new ModItems().initItems();
 		new ModEntities().initEntities();
 		SoundTypes.loadSoundsJson(MOD_ID);
-
+		addSpiceOfLifeCompat();
 	}
 
 	public void afterGameStart() {
