@@ -313,3 +313,5 @@ tile.pepeethings.furnace.porcelain.active.desc=Used to smelt items very quickly.
 
 gui.furnace.label.furnace.porcelain=Porcelain Furnace
 subtitles.item.chisel.use=Chiseling block
+
+btwaila.tooltip.furnace.porcelain.speed=Speed:

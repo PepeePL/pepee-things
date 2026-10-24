@@ -18,6 +18,9 @@
 		"main": [
 			"qapy.pepeethings.PepeeThingsMod"
 		],
+		"btwaila": [
+			"qapy.pepeethings.compat.btwaila.BTWailaPlugin"
+		],
 		"client": ["qapy.pepeethings.PepeeThingsClient"]
 	},
 	"mixins": [
@@ -31,6 +34,7 @@
 	},
 	"suggests": {
 		"modmenu": ">=${modmenu}",
-		"spiceoflife": "*"
+		"spiceoflife": "*",
+		"btwaila": "*"
 	}
 }

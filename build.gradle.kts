@@ -46,6 +46,7 @@ dependencies {
 	compileOnly(libs.joml.primitives)
 	compileOnly(libs.slf4jApi)
 	compileOnly(project(":spice-of-life-bta"))
+	compileOnly("useless:btwaila:1.3.1")
 
 	// Only required for development/launch at runtime, won't be part of any builds
 	localRuntime(libs.modMenu) // Optional, can be removed
