@@ -303,8 +303,13 @@ tile.pepeethings.glass.patterned.desc=Granite sand heated until it becomes trans
 tile.pepeethings.glass.framed.name=Framed Glass
 tile.pepeethings.glass.framed.desc=Rocky sand heated until it becomes transparent. Cheaper than framed glass.
 tile.pepeethings.bluescreen.name=Blue Screen
-tile.pepeethings.bluescreen.desc=Used to make a blue screen for video editing
+tile.pepeethings.bluescreen.desc=Used to make a blue screen for video editing.
 tile.pepeethings.greenscreen.name=Green Screen
-tile.pepeethings.greenscreen.desc=Used to make a green screen for video editing
+tile.pepeethings.greenscreen.desc=Used to make a green screen for video editing.
+tile.pepeethings.furnace.porcelain.idle.name=Porcelain Furnace
+tile.pepeethings.furnace.porcelain.idle.desc=Used to smelt items very quickly. Needs some time to heat up.
+tile.pepeethings.furnace.porcelain.active.name=Porcelain Furnace
+tile.pepeethings.furnace.porcelain.active.desc=Used to smelt items very quickly. Needs some time to heat up.
 
+gui.furnace.label.furnace.porcelain=Porcelain Furnace
 subtitles.item.chisel.use=Chiseling block
