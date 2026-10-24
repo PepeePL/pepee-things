@@ -1,4 +1,4 @@
-package qapy.pepeethings.mixin;
+package qapy.pepeethings.mixin.client;
 
 import net.minecraft.client.gui.guidebook.crafting.RecipePageCrafting;
 import net.minecraft.client.gui.guidebook.crafting.displays.RecipeDisplayAdapter;

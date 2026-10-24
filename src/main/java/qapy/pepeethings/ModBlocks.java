@@ -57,6 +57,9 @@ public class ModBlocks {
 	public static Block<?> GLASS_FRAMED;
 	public static Block<?> BLUESCREEN;
 	public static Block<?> GREENSCREEN;
+	public static Block<?> PORCELAIN_FURNACE_IDLE;
+	public static Block<?> PORCELAIN_FURNACE_ACTIVE;
+	public static Block<?> BRICK_PORCELAIN;
 
 	public void initBlocks(){
 		GLASS_COLORED = new BlockBuilder(MOD_ID)
@@ -298,6 +301,25 @@ public class ModBlocks {
 			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.MISCELLANEOUS))
 			.build("greenscreen", "greenscreen", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
 			.withHardness(1.0F)
+			.withSound(BlockSounds.STONE)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		PORCELAIN_FURNACE_ACTIVE = new BlockBuilder(MOD_ID)
+			.build("furnace.porcelain.active", "furnace_porcelain_active", blockID(), (b -> new BlockLogicFurnacePorcelain(b, true)))
+			.withHardness(3.5F)
+			.withSound(BlockSounds.STONE)
+			.withLightEmission(0.875F)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE, BlockTags.NOT_IN_CREATIVE_MENU);
+		PORCELAIN_FURNACE_IDLE = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.WORKBENCHES))
+			.build("furnace.porcelain.idle", "furnace_porcelain_idle", blockID(), (b -> new BlockLogicFurnacePorcelain(b, false)))
+			.withHardness(3.5F)
+			.withSound(BlockSounds.STONE)
+			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
+		BRICK_PORCELAIN = new BlockBuilder(MOD_ID)
+			.setCreativeInventoryPlacement(new CreativeInventoryPlacement.Category(CreativeInventoryCategory.NATURAL))
+			.build("brick.porcelain", "brick_porcelain", blockID(), (b -> new BlockLogic(b, Materials.STONE)))
+			.withHardness(2F)
+			.withBlastResistance(10F)
 			.withSound(BlockSounds.STONE)
 			.withTags(BlockTags.MINEABLE_BY_PICKAXE);
 	}

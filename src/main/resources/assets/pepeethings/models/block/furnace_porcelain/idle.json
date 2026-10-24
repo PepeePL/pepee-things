@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/orientable_with_bottom",
+  "textures": {
+    "top": "pepeethings:block/furnace_porcelain/top",
+    "bottom": "pepeethings:block/furnace_porcelain/top",
+    "front": "pepeethings:block/furnace_porcelain/idle_front",
+    "side": "pepeethings:block/furnace_porcelain/side"
+  }
+}

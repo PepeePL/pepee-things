@@ -8,6 +8,7 @@ import net.minecraft.client.render.block.model.BlockModelDispatcher;
 import net.minecraft.client.render.block.model.BlockModelGlass;
 import net.minecraft.client.render.block.model.BlockModelStandard;
 import net.minecraft.client.render.block.model.generic.BlockModelGeneric;
+import net.minecraft.client.render.block.model.generic.BlockModelGenericFurnace;
 import net.minecraft.client.render.colorizer.Colorizers;
 import net.minecraft.client.render.item.model.ItemModelDispatcher;
 import net.minecraft.client.render.item.model.ItemModelStandard;
@@ -57,6 +58,9 @@ public class PepeeThingsModels {
 		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_BUBBLE, "pepeethings:block/glass_bubble/").setAllTextures("pepeethings:block/glass_bubble/none"));
 		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_PATTERNED, "pepeethings:block/glass_patterned/").setAllTextures("pepeethings:block/glass_patterned/none"));
 		dispatcher.addDispatch(new BlockModelGlass<>(ModBlocks.GLASS_FRAMED, "pepeethings:block/glass_framed/").setAllTextures("pepeethings:block/glass_framed/none"));
+		dispatcher.addDispatch(new BlockModelStandard<>(ModBlocks.BRICK_PORCELAIN).setAllTextures("pepeethings:block/brick_porcelain"));
+		dispatcher.addDispatch(new BlockModelGenericFurnace<>(ModBlocks.PORCELAIN_FURNACE_ACTIVE, "pepeethings:block/furnace_porcelain/active"));
+		dispatcher.addDispatch(new BlockModelGenericFurnace<>(ModBlocks.PORCELAIN_FURNACE_IDLE, "pepeethings:block/furnace_porcelain/idle"));
 
 //		ModelHelper.setBlockModel(ModBlocks.CRATE, () -> new BlockModelCrate<>(ModBlocks.CRATE).setAllTextures("pepeethings:block/crate/side"));
 	}

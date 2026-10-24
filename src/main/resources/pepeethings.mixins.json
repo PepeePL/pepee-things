@@ -12,12 +12,18 @@
     "ItemDyeMixin",
     "ItemToolHoeMixin",
     "MobMixin",
+    "PlayerMixin",
     "decorate.BlackClayOverworldMixin",
     "decorate.BlueClayOverworldMixin",
     "decorate.RedClayNetherMixin",
     "decorate.WhiteClayOverworldMixin"
   ],
   "client": [
-    "RecipePageCraftingMixin"
+    "client.PacketHandlerClientMixin",
+    "client.PlayerLocalMixin",
+    "client.RecipePageCraftingMixin"
+  ],
+  "server": [
+    "server.PlayerServerMixin"
   ]
 }
