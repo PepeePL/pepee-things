@@ -30,6 +30,7 @@ repositories {
     maven("https://maven.thesignalumproject.net/infrastructure") { name = "SignalumMavenInfrastructure" }
     maven("https://maven.thesignalumproject.net/releases") { name = "SignalumMavenReleases" }
 	maven("https://maven.thesignalumproject.net/nightly") { name = "SignalumMavenNightly" }
+	maven { url = uri("https://jitpack.io") }
 }
 dependencies {
     minecraft("::${libs.versions.bta.get()}")
@@ -45,8 +46,8 @@ dependencies {
 	compileOnly(libs.joml)
 	compileOnly(libs.joml.primitives)
 	compileOnly(libs.slf4jApi)
-	compileOnly(project(":spice-of-life-bta"))
 	compileOnly("useless:btwaila:1.3.1")
+	compileOnly("com.github.PepeePL:spice-of-life-bta:8.0-SNAPSHOT")
 
 	// Only required for development/launch at runtime, won't be part of any builds
 	localRuntime(libs.modMenu) // Optional, can be removed

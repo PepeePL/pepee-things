@@ -11,7 +11,7 @@ public class SpiceOfLifeCompat {
 	public static void addSpiceOfLifeCompat(){
 		if(spiceOfLifeLoaded) {
 			SuperFoodsRegistry.addSuperFood(ModItems.CARROT_IRON);
-			LOGGER.info("Spice of Life: BTA! Edition detected.");
+			LOGGER.info("Spice of Life: BTA! Edition detected, compatibility enabled.");
 		}
 	}
 }
